@@ -145,56 +145,78 @@ textarea {
     box-shadow: 0 0 30px hsl(208, 100%, 97%, 0.7);
 }
 
+.hse_information button {
+    width: 150px;
+    border: none;
+    background: hsl(0, 3%, 18%);
+    color: aliceblue;
+    border-radius: 15px;
+    padding: 8px 4px;
+}
+
 .home_container .suggested_properties {
     background: hsl(0, 2%, 16%, 0.2);
     width: 350px;
-    height: 550px;
+
     display: flex;
     padding: 10px;
     flex-direction: column;
     border-radius: 10px;
     display: flex;
     align-items: center;
-    justify-content: first baseline;
+    justify-content: first-baseline;
 }
 
-.suggested_properties .search_bar {
+.suggested_properties .sugg_heading {
     padding: 10px;
-}
-
-.search_bar input {
-    background: transparent;
-    outline: none;
-    flex: 1;
-    border: 0;
-    padding: 8px 4px;
-    font-size: 18px;
-    color: black;
-}
-
-.search_bar button .bxs-search-alt-2 {
-    width: 30px;
-    font-size: 18px;
-}
-
-.search_bar button {
-    border: 0;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
+    font-weight: 500;
 }
 
 .suggested_properties .more_hse {
     padding: 10px;
     display: flex;
-    flex-direction: column;
     border: 2px solid black;
     border-radius: 10px;
     margin-top: 15px;
     width: 80%;
 }
 
+.more_hse .the_img {
+    display: flex;
+    width: 200px;
+}
+
+
+.more_hse .more_hse_info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+}
+
+.more_hse .more_hse_info a {
+    border: none;
+    background: rgb(90, 98, 105);
+    color: black;
+    border-radius: 15px;
+    text-align: center;
+    padding: 8px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.more_hse .more_hse_info a:hover {
+    letter-spacing: 0.25em;
+    background: hsl(240, 47%, 58%);
+    color: aliceblue;
+    box-shadow: 0 0 30px hsl(240, 23%, 58%);
+    transition: 0.3s ease-in-out;
+}
+
+.more_hse .more_hse_info label {
+    font-weight: 500;
+    padding: 4px;
+}
 
 /*Footer*/
 

@@ -223,6 +223,7 @@ nav {
     background: hsl(240, 47%, 58%);
     color: aliceblue;
     box-shadow: 0 0 30px hsl(240, 47%, 58%);
+    transition: 0.3s ease-in-out;
 }
 
 .hse_details .hse img {
