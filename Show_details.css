@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+:root {
+    --primary: hsla(220, 3%, 23%, 0.2);
+    --secondary: hsla(246, 42%, 35%, 0.4);
+}
+
+body {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    background-position: center;
+    background-size: cover;
+}
+
+.main {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+
+/*Navigation*/
+
+nav {
+    display: flex;
+    padding: 2% 4%;
+    justify-content: space-between;
+}
+
+.nav_logo {
+    font-size: 80px;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: -15px;
+    color: rgb(36, 33, 33);
+    margin-top: -30px;
+    margin-left: -20px;
+}
+
+.nav_logo:hover {
+    transition: 0.3s ease;
+    color: hsla(246, 42%, 35%);
+}
+
+.nav_links {
+    text-align: right;
+}
+
+.nav_links ul li {
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+    margin-top: 0;
+}
+
+.nav_links ul li a {
+    color: rgb(17, 15, 15);
+    font-size: 30px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.nav_links ul li a:hover {
+    color: aliceblue;
+    transition: 0.2s ease;
+}
+
+.nav_links ul li::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: aliceblue;
+    display: block;
+    margin: auto;
+    transition: 0.2s ease;
+}
+
+.nav_links ul li:hover::after {
+    width: 100%;
+    color: aliceblue;
+}
+
+/*Home Screen*/
+.home_container {
+    display: flex;
+}
+
+.home_container .image_container {
+    margin-left: 2%;
+    background-color: hsl(0, 2%, 16%, 0.2);
+    width: 600px;
+    height: 500px;
+    border-radius: 10px;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.home_container .hse_information {
+    margin-left: 2%;
+    background-color: none;
+    width: 450px;
+    height: 500px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+
+}
+
+.hse_information .txtbox {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 80%;
+    margin-bottom: 10px;
+
+}
+
+.hse_information form input:hover {
+    background: aliceblue;
+    color: black;
+    box-shadow: 0 0 30px hsl(208, 100%, 97%, 0.7);
+}
+
+.hse_information .txtarea {
+    border-radius: 5px;
+    border: none;
+    width: 95%;
+}
+
+textarea {
+    resize: none;
+}
+
+.hse_information form textarea:hover {
+    background: aliceblue;
+    color: black;
+    box-shadow: 0 0 30px hsl(208, 100%, 97%, 0.7);
+}
+
+.home_container .suggested_properties {
+    background: hsl(0, 2%, 16%, 0.2);
+    width: 350px;
+    height: 550px;
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: first baseline;
+}
+
+.suggested_properties .search_bar {
+    padding: 10px;
+}
+
+.search_bar input {
+    background: transparent;
+    outline: none;
+    flex: 1;
+    border: 0;
+    padding: 8px 4px;
+    font-size: 18px;
+    color: black;
+}
+
+.search_bar button .bxs-search-alt-2 {
+    width: 30px;
+    font-size: 18px;
+}
+
+.search_bar button {
+    border: 0;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.suggested_properties .more_hse {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-top: 15px;
+    width: 80%;
+}
+
+
+/*Footer*/
+
+.footer {
+    padding: 5px 30px;
+    color: black;
+    display: flex;
+    background: linear-gradient(150deg, var(--primary), var(--secondary));
+}
+
+.footer div {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.useful_links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.useful_links a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.useful_links a:hover {
+    color: #fff;
+    background: linear-gradient(rgb(40, 50, 70), hsla(246, 42%, 35%));
+    display: block;
+    border-radius: 5px;
+    transition: 0.2s ease;
+    height: 30px;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-align: center;
+    justify-content: center;
+    padding: 10px 10px;
+}
