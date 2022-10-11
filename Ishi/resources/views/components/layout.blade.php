@@ -30,16 +30,19 @@
 <body class="mb-48">
     <nav class="flex justify-between items-center mb-4">
         <a href="/"
-            ><img class="w-32" src="{{asset('images/ishi (4).png')}}" alt="" class="logo"
+            ><img class="w-32 ml-7" src="{{asset('images/ishi (4).png')}}" alt=""
         /></a>
         <ul class="flex space-x-6 mr-6 text-lg">
+            <li><a href="index.php">HOME</a></li>
+            <li><a href="#">ABOUT US</a></li>
+            <li><a href="#">CONTACT US</a></li> 
             <li>
-                <a href="register.html" class="hover:text-laravel"
+                <a href="register.html" class="hover:text-blue-400"
                     ><i class="fa-solid fa-user-plus"></i> Register</a
                 >
             </li>
             <li>
-                <a href="login.html" class="hover:text-laravel"
+                <a href="login.html" class="hover:text-blue-400"
                     ><i class="fa-solid fa-arrow-right-to-bracket"></i>
                     Login</a
                 >
