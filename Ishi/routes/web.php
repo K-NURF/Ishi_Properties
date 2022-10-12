@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('home');
 });
 
-/*  TODO on Client Page 
+/*  TODO on Buyer Page 
     => Create a controller to show the properties.
     => Create a function in the controller to display the individual properties.
 */
