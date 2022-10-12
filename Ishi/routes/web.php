@@ -16,3 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
+
+/*  TODO on Client Page 
+    => Create a controller to show the properties.
+    => Create a function in the controller to display the individual properties.
+*/
+Route::get('/properties', function(){
+    return view('BuyerViews.Client');
+});
+
