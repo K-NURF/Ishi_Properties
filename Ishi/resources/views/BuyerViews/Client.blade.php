@@ -74,7 +74,20 @@
             </div>
             <!--HOUSE DETAILS-->
             <div class="hse_details">
-                <div class="hse"><img src="" alt="img1"><label for="">status</label>
+
+                @foreach ($properties as $property)
+                <div class="hse">
+                    <img style="width: 120px" src="{{ asset('/images/' . $property->Image) }}" alt="img1">
+                    <p>Name: {{$property->propertyName}}</p>
+                    <label for="">status: {{$property->Status}}</label>
+                    <p>Description: {{$property->Description}}</p>
+                    <a href="Showdetails.blade.php">Show Details</a>
+                </div>   
+                
+                @endforeach
+
+                
+                {{-- <div class="hse"><img src="" alt="img1"><label for="">status</label>
                     <p>description</p><a href="Showdetails.blade.php">Show Details</a>
                 </div>
                 <div class="hse"><img src="" alt="img1"><label for="">status</label>
@@ -88,10 +101,7 @@
                 </div>
                 <div class="hse"><img src="" alt="img1"><label for="">status</label>
                     <p>description</p><a href="Showdetails.blade.php">Show Details</a>
-                </div>
-                <div class="hse"><img src="" alt="img1"><label for="">status</label>
-                    <p>description</p><a href="Showdetails.blade.php">Show Details</a>
-                </div>
+                </div> --}}
             </div>
         </div>
     </section>
