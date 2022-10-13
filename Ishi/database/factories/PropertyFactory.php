@@ -22,7 +22,7 @@ class PropertyFactory extends Factory
             'Address' => fake()->address(),
             'Description' => fake()->paragraph(3),
             'Status' => 'rent',
-            'Image' => 'pexels-josh-fields-3964406.jpg',
+            'Image' => 'download.jpg',
             'OwnerId'=> fake()->randomNumber(),
         ];
     }
