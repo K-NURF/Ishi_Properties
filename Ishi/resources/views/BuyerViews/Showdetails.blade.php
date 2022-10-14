@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="Show_details.css">
+    <link rel="stylesheet" href="{{ asset('css/Show_details.css')}}">
     <title>DETAILS</title>
 </head>
 
@@ -37,19 +37,25 @@
         <!--Home Screen-->
         <div class="home_container">
             <div class="image_container">
-                <img src="" alt="img">
+                <img src="{{ asset('/images/' . $property->Image) }}" alt="img">
                 <img src="" alt="">
             </div>
             <div class="hse_information">
-                <form action="">
+                {{-- <form action="">
                     <input type="text" class="txtbox" placeholder="Property
                             Name">
                     <input type="text" class="txtbox" placeholder="Price">
                     <input type="text" class="txtbox" placeholder="Location">
                     <input type="text" class="txtbox" placeholder="Ownercontact information">
                     <textarea class="txtarea" id="" cols="30" rows="10" placeholder="Property description"></textarea>
-                </form>
+                </form> --}}
+                <p><b>Property Name:</b> {{$property->propertyName}}</p>
+                <p><b>City:</b> {{$property->propertyLocation}}</p>
+                <p><b>Address:</b> {{$property->Address}}</p>
+                {{-- <textarea class="txtarea" id="" cols="30" rows="10" placeholder="Property description">{{$property->Description}}</textarea> --}}
+                <p> <b>Description:</b> {{$property->Description}}</p>
                 <div class="btnss">
+
                     <button>Back</button>
                     <button>Contact Owner</button>
                 </div>

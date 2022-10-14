@@ -12,4 +12,10 @@ class BuyersController extends Controller
         return view('BuyerViews.Client')
             ->with('properties', $properties);
     }
+    public function show($id){
+        $property = Property::find($id);
+        // return $property;
+        return view('BuyerViews.Showdetails')
+            ->with('property', $property);
+    }
 }
