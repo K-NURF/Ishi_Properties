@@ -80,7 +80,7 @@
                     <p>Name: {{ $property->propertyName }}</p>
                     <label for="">status: {{ $property->Status }}</label>
                     <p>{{ $property->propertyLocation}}, {{$property->Address}}</p>
-                    <a href="Showdetails.blade.php">Show Details</a>
+                    <a href="/properties/{{$property->propertyId}}">Show Details</a>
                 </div>
             @endforeach
 
