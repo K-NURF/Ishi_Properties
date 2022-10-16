@@ -19,6 +19,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
+Route::get('/about', function () {
+    return view('about');
+});
+Route::get('/property', function () {
+    return view('properties.index');
+});
 
 /*  TODO on Buyer Page 
     => Create a controller to show the properties.
