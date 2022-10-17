@@ -17,13 +17,13 @@ class PropertyFactory extends Factory
     public function definition()
     {
         return [
-            'propertyName' => 'blah',
-            'propertyLocation' => fake()->city(),
-            'Address' => fake()->address(),
-            'Description' => fake()->paragraph(3),
-            'Status' => 'rent',
-            'Image' => 'download.jpg',
-            'OwnerId'=> fake()->randomNumber(),
+            'name' => $this->faker->sentence(),
+            'address' => fake()->address(),
+            'location' => fake()->city(),
+            'type' => 'mansion',
+            'purpose' => 'sell',
+            'website' => $this->faker->url(),
+            'image' => 'download.jpg',
         ];
     }
 }

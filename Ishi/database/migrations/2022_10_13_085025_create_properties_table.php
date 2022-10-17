@@ -14,14 +14,14 @@ return new class extends Migration
     public function up()
     {
         Schema::create('properties', function (Blueprint $table) {
-            $table->increments('propertyId');
-            $table->string('propertyName');
-            $table->string('propertyLocation');
-            $table->string('Address');
-            $table->string('Description');
-            $table->string('Status');
-            $table->string('Image');
-            $table->integer('OwnerId');
+            $table->id();
+            $table->string('name');
+            $table->string('address');
+            $table->string('location');
+            $table->string('type');
+            $table->string('purpose');
+            $table->string('website')->nullable();
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }
