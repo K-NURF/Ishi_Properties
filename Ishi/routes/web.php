@@ -32,6 +32,8 @@ Route::get('/property', function () {
 */
 Route::get('/properties', [BuyersController::class, 'index']);
 Route::get('/properties/{id}', [BuyersController::class, 'show']);
+Route::get('/test', [BuyersController::class, 'test']);
+
 // Route::get('/properties/{id}', function($id){
 //     return view('BuyerViews.Showdetails',
 //         ['property' => Property::find($id)]
