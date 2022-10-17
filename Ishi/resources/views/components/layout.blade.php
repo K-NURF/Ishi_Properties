@@ -13,6 +13,7 @@
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
 />
+    <script src="//unpkg.com/alpinejs" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -26,7 +27,9 @@
         };
     </script>
     <link rel="stylesheet" href="css/main-footer.css">
+    <link rel="stylesheet" href="../css/main-footer.css">
     <link rel="stylesheet" href="css/style6.css">
+    <link rel="stylesheet" href="../css/style6.css">
 </head>
 <body class="mb-24">
     <nav class="flex justify-between items-center mb-4">
@@ -34,6 +37,7 @@
             ><img class="w-32 ml-7" src="{{asset('images/ishi (4).png')}}" alt=""
         /></a>
         <ul class="flex space-x-6 mr-6 text-lg">
+            
             <li><a href="/">HOME</a></li>
             <li><a href="/about">ABOUT US</a></li>
             <li><a href="#">CONTACT US</a></li> 
@@ -85,7 +89,7 @@
                 <h4>Online services </h4>
                 <ul>
                     <li><a href="#">Rentals</a></li>
-                    <li><a href="/property">Property management</a></li>
+                    <li><a href="/property/all">Property management</a></li>
                     <li><a href="#">Leasing</a></li>
                     <li><a href="#">Online purchase</a></li>
                 </ul>
@@ -108,9 +112,9 @@
         <p class="ml-2">Copyright &copy; 2022, All Rights reserved</p>
 
         <a
-            href="#"
+            href="/property/create"
             class="absolute top-1/3 right-10 bg-blue-600 text-white py-2 px-5"
-            >Chat with us</a
+            >Add Property</a
         >
 
     </footer>

@@ -8,14 +8,23 @@ use Illuminate\Database\Eloquent\Model;
 class Property extends Model
 {
     use HasFactory;
-    protected $primaryKey = 'propertyId';
     protected $fillable = [
-        'propertyName',
-        'propertyLocation',
-        'Address',
-        'Description',
-        'Status',
-        'Image',
-        'OwnerId'
+        'name',
+        'address',
+        'location',
+        'type',
+        'purpose',
+        'website',
+        'description',
+        'image'
     ];
+
+    public function scopeFilter($query, array $filters) {
+
+        if($filters['search'] ?? false){
+            $query->where('name', 'like', '%'. request('search').'%')
+            ->orWhere('address', 'like', '%'. request('search').'%')
+            ->orWhere('location', 'like', '%'. request('search').'%'); 
+        }
+    }
 }
