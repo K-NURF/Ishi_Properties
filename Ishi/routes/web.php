@@ -34,6 +34,9 @@ Route::post('/property', [PropertyController::class, 'store']);
 //show all Properties
 Route::get('/property/all', [PropertyController::class, 'index']);
 
+//show propery Details
+Route::get('/property/details', [PropertyController::class, 'details']);
+
 
 
 

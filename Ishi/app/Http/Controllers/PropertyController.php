@@ -39,4 +39,9 @@ class PropertyController extends Controller
         // ->filter(request(['search']))->paginate(6)
     ]);
     }
+
+    //show details of properties
+    public function details(){
+        return view('properties.show');
+    }
 }

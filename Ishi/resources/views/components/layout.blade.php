@@ -37,6 +37,7 @@
             ><img class="w-32 ml-7" src="{{asset('images/ishi (4).png')}}" alt=""
         /></a>
         <ul class="flex space-x-6 mr-6 text-lg">
+            
             <li><a href="/">HOME</a></li>
             <li><a href="/about">ABOUT US</a></li>
             <li><a href="#">CONTACT US</a></li> 
