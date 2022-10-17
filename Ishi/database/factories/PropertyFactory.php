@@ -22,6 +22,7 @@ class PropertyFactory extends Factory
             'location' => fake()->city(),
             'type' => 'mansion',
             'purpose' => 'sell',
+            'description' => $this->faker->paragraph(5),
             'website' => $this->faker->url(),
             'image' => 'download.jpg',
         ];

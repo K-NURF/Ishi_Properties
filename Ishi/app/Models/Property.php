@@ -15,6 +15,7 @@ class Property extends Model
         'type',
         'purpose',
         'website',
+        'description',
         'image'
     ];
 

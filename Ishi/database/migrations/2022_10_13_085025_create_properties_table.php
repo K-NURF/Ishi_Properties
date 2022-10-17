@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('location');
             $table->string('type');
             $table->string('purpose');
+            $table->longtext('description');
             $table->string('website')->nullable();
             $table->string('image')->nullable();
             $table->timestamps();
