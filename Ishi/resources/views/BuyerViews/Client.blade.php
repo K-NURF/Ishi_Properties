@@ -9,19 +9,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="Client.css">
+    <link rel="stylesheet" href="{{ asset('css/Client.css') }}">
     <title>CLIENT PAGE</title>
 </head>
 
 <body>
+
     <!--Navigation bar-->
     <div class="nav">
-        <a href="" class="nav_logo">L</a>
+        <a href="" class="nav_logo"><img src="images\ishi (2).png" alt="L"></a>
         <div class="menu_stuff">
-            <form action="" class="search_bar">
+            <!--<form action="" class="search_bar">
                 <input type="text" placeholder="search" name="search">
                 <button type="submit"><i class='bx bxs-search-alt-2'></i></button>
-            </form>
+            </form>-->
         </div>
         <div class="nav_links">
             <ul>
@@ -51,8 +52,7 @@
             <h2>Status</h2>
             <form action="">
                 <input type="checkbox" id="buy" value="buy" /><label for="buy">Buy</label><br>
-                <input type="checkbox" id="loan" value="loan" /><label for="loan">loan</label><br>
-                <input type="checkbox" id="both" value="both" /><label for="both">Both</label><br>
+                <input type="checkbox" id="Rent" value="Rent" /><label for="Rent">Rent</label><br>
             </form>
             <h2>Price</h2>
             <div class="price_filter">
@@ -77,10 +77,10 @@
             @foreach ($properties as $property)
                 <div class="hse">
                     <img src="{{ asset('/images/' . $property->Image) }}" alt="img1">
-                    <p>Name: {{ $property->propertyName }}</p>
+                    <label>Name: {{ $property->propertyName }}</label>
                     <label for="">status: {{ $property->Status }}</label>
-                    <p>{{ $property->propertyLocation}}, {{$property->Address}}</p>
-                    <a href="/properties/{{$property->propertyId}}">Show Details</a>
+                    <p>{{ $property->propertyLocation }}, {{ $property->Address }}</p>
+                    <a href="/properties/{{ $property->propertyId }}">Show Details</a>
                 </div>
             @endforeach
 
@@ -106,47 +106,49 @@
 
     <!--Footer Section-->
     <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="footer-col">
-                    <h2>Ishi Homes</h2>
-                    <ul>
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">our services</a></li>
-                        <li><a href="#">private policy</a></li>
-                        <li><a href="#">Affiliation </a></li>
-                    </ul>
-                </div>
+        <div class="row">
+            <div class="footer-col">
+                <h2>Ishi Homes</h2>
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">our services</a></li>
+                    <li><a href="#">private policy</a></li>
+                    <li><a href="#">Affiliation </a></li>
+                </ul>
+            </div>
 
-                <div class="footer-col">
-                    <h2>Get help</h2>
-                    <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Purchases</a></li>
-                        <li><a href="#">Agreement Policies</a></li>
-                        <li><a href="#">Payment options</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h2>Online services </h2>
-                    <ul>
-                        <li><a href="#">Rentals</a></li>
-                        <li><a href="#">Property management</a></li>
-                        <li><a href="#">Leasing</a></li>
-                        <li><a href="#">Online purchase</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h2>Follow us</h2>
-                    <div class="social-links">
-                        <a href="#"><i class='bx bxl-facebook-circle'></i>
-                            <a href="#"><i class='bx bxl-twitter'></i>
-                                <a href="#"><i class='bx bxl-instagram-alt'></i>
-                                    <a href="#"><i class='bx bxl-youtube'></i>
-                                        <a href="#"><i class='bx bxl-linkedin-square'></i>
-                    </div>
+            <div class="footer-col">
+                <h2>Get help</h2>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Purchases</a></li>
+                    <li><a href="#">Agreement Policies</a></li>
+                    <li><a href="#">Payment options</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>Online services </h2>
+                <ul>
+                    <li><a href="#">Rentals</a></li>
+                    <li><a href="#">Property management</a></li>
+                    <li><a href="#">Leasing</a></li>
+                    <li><a href="#">Online purchase</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>Follow us</h2>
+                <div class="social-links">
+                    <a href="#"><i class='bx bxl-facebook-circle'></i>
+                        <a href="#"><i class='bx bxl-twitter'></i>
+                            <a href="#"><i class='bx bxl-instagram-alt'></i>
+                                <a href="#"><i class='bx bxl-youtube'></i>
+                                    <a href="#"><i class='bx bxl-linkedin-square'></i>
                 </div>
             </div>
+        </div>
+
+    </footer>
+
 </body>
 
 </html>

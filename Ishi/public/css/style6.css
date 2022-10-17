@@ -1,0 +1,356 @@
+.t{
+    float: left;
+    width: 33.33%;
+    }
+    .e{
+        float: left;
+        width: 25%;
+        }
+    li{
+        list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+  
+  .banner1, .banner2, .banner3, .banner4{
+  height: 100vh;
+  width: 900px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  
+  }
+  .s{
+    width: 120%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  animation: zoom-out 3s linear infinite;
+  }
+  @keyframes zoom-out{
+    100%{
+      width: 100%;
+    }
+  }
+  .text-box{
+  
+    width: 600px;
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    color: #fff;
+    animation: textup 12s linear infinite;
+    transform: translateY(100px);
+  }
+  
+  .text-box h1{
+  margin-bottom: 40px;
+  }
+  .text-box p{
+  font-size: 14px;
+  line-height: 18px;
+  margin-top: 80px;
+  }
+  .text-box span{
+    background-color: aqua;
+  height: 1px;
+  width: 100px;
+  position: absolute;
+  left: 0;
+  }
+  .banner1{
+    animation: slide1 12s linear infinite;
+  }
+  .banner2{
+    animation: slide2 12s linear infinite;
+  }
+  .banner3{
+    animation: slide3 12s linear infinite;
+  }
+  .banner4{
+    animation: slide4 12s linear infinite;
+  }
+  @keyframes slide1{
+    0%{
+      visibility: visible;
+    }
+    25%{
+      visibility: hidden;
+    }
+    50%{
+      visibility: hidden;
+    }
+    75%{
+      visibility: hidden;
+    }
+    100%{
+      visibility: visible;
+    }
+  }
+  @keyframes slide2{
+    0%{
+      visibility: hidden;
+    }
+    25%{
+      visibility: hidden;
+    }
+    50%{
+      visibility: visible;
+    }
+    75%{
+      visibility: hidden;
+    }
+    100%{
+      visibility: hidden;
+    }
+  }
+  @keyframes slide3{
+    0%{
+      visibility: hidden;
+    }
+    25%{
+      visibility: hidden;
+    }
+    50%{
+      visibility: hidden;
+    }
+    75%{
+      visibility: visible;
+    }
+    100%{
+      visibility: hidden;
+    }
+  }
+  @keyframes slide4{
+    0%{
+      visibility: hidden;
+    }
+    25%{
+      visibility: hidden;
+    }
+    50%{
+      visibility: hidden;
+    }
+    75%{
+      visibility: hidden;
+    }
+    100%{
+      visibility: visible;
+    }
+  }
+  @keyframes textup{
+    10%{
+  transform: translateY(0px);
+    }
+    100%{
+  transform: translateY(0px);
+    }
+    
+  }
+  .text-box1{
+    animation-delay: 0s;
+  }
+  .text-box2{
+    animation-delay: 3s;
+  }
+  .text-box3{
+    animation-delay: 6s;
+  }
+  .text-box4{
+    animation-delay: 9s;
+  }
+
+  .home-container {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  .home-container01 {
+    width: 200px;
+    height: 819px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #202b9b;
+  }
+  .home-container02 {
+    width: 200px;
+    height: 263px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .home-button {
+    width: 200px;
+    height: 48px;
+    background-color: rgb(67, 107, 199);
+  }
+  .home-button01 {
+    width: 200px;
+    height: 48px;
+  }
+  .home-button02 {
+    width: 200px;
+    height: 48px;
+  }
+  .home-container03 {
+    width: 200px;
+    height: 239px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .home-button03 {
+    width: 200px;
+    height: 48px;
+  }
+  .home-button04 {
+    width: 200px;
+    height: 48px;
+  }
+  .home-button05 {
+    width: 200px;
+    height: 48px;
+  }
+  .home-container04 {
+    width: 200px;
+    height: 329px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .home-button06 {
+    width: 200px;
+    height: 48px;
+  }
+  .home-button07 {
+    width: 200px;
+    height: 48px;
+  }
+  .home-button08 {
+    width: 200px;
+    height: 48px;
+  }
+  .home-button09 {
+    width: 200px;
+    height: 48px;
+  }
+  .home-container05 {
+    flex: 0 0 auto;
+    width: 1129px;
+    height: auto;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .home-container06 {
+    width: 1161px;
+    height: 814px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .home-text {
+    top: -3px;
+    left: 294px;
+    position: absolute;
+  }
+  .home-container07 {
+    top: 75px;
+    left: 0px;
+    width: 1161px;
+    height: 200px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #78b7c8;
+  }
+  .home-text05 {
+    top: 55px;
+    left: 371px;
+    position: absolute;
+  }
+  .home-image {
+    left: 20px;
+    width: 185px;
+    bottom: 0px;
+    height: 100%;
+    position: absolute;
+    align-self: center;
+    object-fit: cover;
+  }
+  .home-container08 {
+    flex: 0 0 auto;
+    width: 100%;
+    border: 2px dashed rgba(120, 120, 120, 0.4);
+    height: 100px;
+    display: flex;
+    align-items: flex-start;
+  }
+  .home-container09 {
+    top: 316px;
+    left: -1px;
+    width: 1161px;
+    height: 200px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #78B7C8;
+  }
+  .home-image1 {
+    top: 30px;
+    left: 50px;
+    width: 159px;
+    height: 138px;
+    position: absolute;
+    object-fit: cover;
+  }
+  .home-text10 {
+    top: 7px;
+    left: 378px;
+    position: absolute;
+  }
+  .home-container10 {
+    flex: 0 0 auto;
+    width: 100%;
+    border: 2px dashed rgba(120, 120, 120, 0.4);
+    height: 100px;
+    display: flex;
+    align-items: flex-start;
+  }
+  .home-container11 {
+    right: -1px;
+    width: 1161px;
+    bottom: 52px;
+    height: 200px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: #78B7C8;
+  }
+  .home-image2 {
+    top: 30px;
+    left: 50px;
+    width: 160px;
+    height: 140px;
+    position: absolute;
+    object-fit: cover;
+  }
+  .home-text15 {
+    top: 0px;
+    left: 382px;
+    position: absolute;
+  }
