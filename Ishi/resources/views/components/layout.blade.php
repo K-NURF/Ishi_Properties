@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="../css/main-footer.css">
     <link rel="stylesheet" href="css/style6.css">
     <link rel="stylesheet" href="../css/style6.css">
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
     <nav class="flex justify-between items-center mb-4">
@@ -37,20 +38,41 @@
             ><img class="w-32 ml-7" src="{{asset('images/ishi (4).png')}}" alt=""
         /></a>
         <ul class="flex space-x-6 mr-6 text-lg">
-            
-            <li><a href="/">HOME</a></li>
-            <li><a href="#">CONTACT US</a></li> 
+
+            @auth
             <li>
-                <a href="register.html" class="hover:text-blue-400"
+                <span class="font-bold">
+                    Welcome {{auth()->user()->name}}
+                </span>    
+                </li> 
+            @endauth
+            
+            <li><a href="/">Home</a></li>
+            <li><a href="/contactUs">Contact us</a></li> 
+            @auth
+            <li><a href="/properties/manage"><i class="fa-solid fa-gear"></i> Manage Properties</a></li>
+
+            <li>
+                <form class="inline"method="POST" action="/logout">
+                @csrf
+            <button type ="submit">
+                <i class="fa solid fa-door-closed"></i>Logout
+            </button>
+            </form>
+            </li>
+            @else
+            <li>
+                <a href="/register" class="hover:text-blue-400"
                     ><i class="fa-solid fa-user-plus"></i> Register</a
                 >
             </li>
             <li>
-                <a href="login.html" class="hover:text-blue-400"
+                <a href="/login" class="hover:text-blue-400"
                     ><i class="fa-solid fa-arrow-right-to-bracket"></i>
                     Login</a
                 >
             </li>
+            @endauth
         </ul>
     </nav>
 
@@ -117,5 +139,6 @@
         >
 
     </footer>
+    <x-flash-message/>
 </body>
 </html>

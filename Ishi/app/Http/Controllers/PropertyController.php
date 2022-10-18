@@ -21,16 +21,19 @@ class PropertyController extends Controller
             'location' => 'required',
             'type' => 'required',
             'purpose' => 'required',
-            'website'=> 'nullable'
+            'website'=> 'nullable',
+            'description' => 'nullable'
         ]);
 
         // if ($request->hasFile('image')) {
         //     $data['image'] = $request->file('image')->store('property_images', 'public');
         // }
 
+        $data['user_id'] = auth()->id();
+
         Property::create($data);
 
-        return redirect('/');
+        return redirect('/')->with('message', 'Property added successfully');
     }
 
     //show all properties

@@ -3,6 +3,7 @@
 use App\Models\Property;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TempController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\BuyersController;
 use App\Http\Controllers\PropertyController;
 
@@ -26,10 +27,10 @@ Route::get('/about', function () {
 });
 
 //show create property form
-Route::get('/property/create', [PropertyController::class, 'create']);
+Route::get('/property/create', [PropertyController::class, 'create'])->middleware('auth');
 
 //store property
-Route::post('/property', [PropertyController::class, 'store']);
+Route::post('/property', [PropertyController::class, 'store'])->middleware('auth');
 
 //show all Properties
 Route::get('/property/all', [PropertyController::class, 'index']);
@@ -37,7 +38,20 @@ Route::get('/property/all', [PropertyController::class, 'index']);
 //show propery Details
 Route::get('/property/details', [PropertyController::class, 'details']);
 
+//show register form
+Route::get('/register',[UserController::class,'create'])->middleware('guest');
 
+//create new user
+Route::post('/users', [UserController::class, 'store']);
+
+//log user out
+Route::post('/logout', [UserController::class, 'logout'])->middleware('auth');
+
+//show login form
+Route::get('/login',[UserController::class,'login'])->name('login')->middleware('guest');
+
+//login user
+Route::post('/users/authenticate',[UserController::class,'authenticate']);
 
 
 
@@ -55,5 +69,4 @@ Route::get('/properties/{id}', [BuyersController::class, 'show']);
 // Route::get('/blah', function(){
 //     return view('BuyerViews.Showdetails');
 // });
-
 
