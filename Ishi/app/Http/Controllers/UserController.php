@@ -27,6 +27,8 @@ class UserController extends Controller
 
         $user = User::create($dataFields);
 
+        
+
         //login
         auth()->login($user);
 
