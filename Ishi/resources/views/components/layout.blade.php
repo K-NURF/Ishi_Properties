@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="css/style6.css">
     <link rel="stylesheet" href="../css/style6.css">
 </head>
-<body class="mb-24">
+<body>
     <nav class="flex justify-between items-center mb-4">
         <a href="/"
             ><img class="w-32 ml-7" src="{{asset('images/ishi (4).png')}}" alt=""
@@ -39,7 +39,6 @@
         <ul class="flex space-x-6 mr-6 text-lg">
             
             <li><a href="/">HOME</a></li>
-            <li><a href="/about">ABOUT US</a></li>
             <li><a href="#">CONTACT US</a></li> 
             <li>
                 <a href="register.html" class="hover:text-blue-400"
@@ -106,14 +105,14 @@
             </div>
         </div>
     </footer>
-    <footer class="fixed bottom-0 left-0 w-full flex items-center justify-start font-bold bg-blue-900 text-blue-300 h-24 mt-0 opacity-90 md:justify-center"
+    <footer class="w-full flex items-center justify-start font-bold bg-blue-900 text-blue-300 h-20 md:justify-center"
     >
     
-        <p class="ml-2">Copyright &copy; 2022, All Rights reserved</p>
+        <p class="ml-2 mr-64">Copyright &copy; 2022, All Rights reserved</p>
 
         <a
             href="/property/create"
-            class="absolute top-1/3 right-10 bg-blue-600 text-white py-2 px-5"
+            class="bg-blue-600 text-white py-2 px-5 rounded ml-24"
             >Add Property</a
         >
 
