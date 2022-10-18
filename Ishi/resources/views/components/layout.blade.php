@@ -39,14 +39,14 @@
         <ul class="flex space-x-6 mr-6 text-lg">
             
             <li><a href="/">HOME</a></li>
-            <li><a href="#">CONTACT US</a></li> 
+            <li><a href="/contactUs">CONTACT US</a></li> 
             <li>
-                <a href="register.html" class="hover:text-blue-400"
+                <a href="/register" class="hover:text-blue-400"
                     ><i class="fa-solid fa-user-plus"></i> Register</a
                 >
             </li>
             <li>
-                <a href="login.html" class="hover:text-blue-400"
+                <a href="/login" class="hover:text-blue-400"
                     ><i class="fa-solid fa-arrow-right-to-bracket"></i>
                     Login</a
                 >
