@@ -10,6 +10,7 @@ class Property extends Model
     use HasFactory;
     protected $fillable = [
         'name',
+        'user_id',
         'address',
         'location',
         'type',
@@ -26,5 +27,10 @@ class Property extends Model
             ->orWhere('address', 'like', '%'. request('search').'%')
             ->orWhere('location', 'like', '%'. request('search').'%'); 
         }
+    }
+
+    //relationship to owner
+    public function owner() {
+        return $this->belongsTo(User::class, 'owner_id');
     }
 }
