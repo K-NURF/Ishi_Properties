@@ -3,6 +3,7 @@
 use App\Models\Property;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TempController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\BuyersController;
 use App\Http\Controllers\PropertyController;
 
@@ -56,4 +57,17 @@ Route::get('/properties/{id}', [BuyersController::class, 'show']);
 //     return view('BuyerViews.Showdetails');
 // });
 
+//show register form
+Route::get('/register',[UserController::class,'create']);
 
+//create new user
+Route::post('/users', [UserController::class, 'store']);
+
+//log user out
+Route::post('/logout', [UserController::class, 'logout']);
+
+//show login form
+
+  Route::get('/login',[UserController::class,'login']);
+
+  Route::post('/users/authenticate',[UserController::class,'authenticate']);
