@@ -35,8 +35,8 @@ class PropertyController extends Controller
 
     //show all properties
     public function index(){
-        return view('properties.index', ['properties' => Property::all()
-        // ->filter(request(['search']))->paginate(6)
+        return view('properties.index', ['properties' => Property::latest()->filter(request(['search']))->paginate(6)
+        
     ]);
     }
 
