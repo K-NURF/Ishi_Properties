@@ -36,10 +36,10 @@
 
             @foreach ($properties as $property)
                 <div class="hse">
-                    <img src="{{ asset('/images/' . $property->Image) }}" alt="img1">
-                    <label>Name: {{ $property->propertyName }}</label>
-                    <label for="">status: {{ $property->Status }}</label>
-                    <p>{{ $property->propertyLocation }}, {{ $property->Address }}</p>
+                    <img src="{{ asset('/images/' . $property->image) }}" alt="img1">
+                    <label>Name: {{ $property->name }}</label>
+                    <label for="">Purpose: {{ $property->purpose }}</label>
+                    <p>{{ $property->propertyLocation }}, {{ $property->address }}</p>
                     <a href="/properties/{{ $property->propertyId }}">Show Details</a>
                 </div>
             @endforeach
