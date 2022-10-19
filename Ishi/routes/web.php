@@ -1,9 +1,11 @@
 <?php
 
-use App\Http\Controllers\BuyersController;
-use App\Http\Controllers\TempController;
 use App\Models\Property;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TempController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\BuyersController;
+use App\Http\Controllers\PropertyController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,16 +17,43 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//Landing page
 Route::get('/', function () {
     return view('home');
 });
+//Show about page
 Route::get('/about', function () {
     return view('about');
 });
-Route::get('/property', function () {
-    return view('properties.index');
-});
+
+//show create property form
+Route::get('/property/create', [PropertyController::class, 'create'])->middleware('auth');
+
+//store property
+Route::post('/property', [PropertyController::class, 'store'])->middleware('auth');
+
+//show all Properties
+Route::get('/property/all', [PropertyController::class, 'index']);
+
+//show propery Details
+Route::get('/property/details', [PropertyController::class, 'details']);
+
+//show register form
+Route::get('/register',[UserController::class,'create'])->middleware('guest');
+
+//create new user
+Route::post('/users', [UserController::class, 'store']);
+
+//log user out
+Route::post('/logout', [UserController::class, 'logout'])->middleware('auth');
+
+//show login form
+Route::get('/login',[UserController::class,'login'])->name('login')->middleware('guest');
+
+//login user
+Route::post('/users/authenticate',[UserController::class,'authenticate']);
+
+
 
 /*  TODO on Buyer Page 
     => Create a controller to show the properties.
@@ -42,5 +71,4 @@ Route::get('/test', [BuyersController::class, 'test']);
 // Route::get('/blah', function(){
 //     return view('BuyerViews.Showdetails');
 // });
-
 
