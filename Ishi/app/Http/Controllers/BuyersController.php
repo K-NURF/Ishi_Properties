@@ -9,7 +9,7 @@ class BuyersController extends Controller
 {
     public function index(){
         $properties = Property::all();
-        return view('BuyerViews.Client')
+        return view('BuyerViews.Buyers')
             ->with('properties', $properties);
     }
     public function show($id){
