@@ -21,10 +21,11 @@ return new class extends Migration
             $table->string('location');
             $table->string('type');
             $table->string('purpose');
-            $table->double('price', 24, 2);
+            $table->string('price');
             $table->longtext('description');
             $table->string('website')->nullable();
-            $table->string('image')->nullable();
+            $table->integer('image')->unsigned();
+            $table->foreign('image')->references('id')->on('images');
             $table->timestamps();
         });
     }

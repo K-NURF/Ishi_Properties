@@ -2,14 +2,21 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Image;
 use App\Models\Property;
 use Illuminate\Http\Request;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
+use PhpParser\ErrorHandler\Collecting;
+
+use function PHPSTORM_META\type;
 
 class BuyersController extends Controller
 {
     public function index(){
-        $properties = Property::get();
+        $properties = DB::table('properties')
+                            ->join('images', 'properties.image', '=' , 'images.id')
+                            ->get();
         
         $locations = DB::table('properties')
                         ->select('location')
@@ -24,41 +31,24 @@ class BuyersController extends Controller
 
     public function show($id){
         $property = Property::find($id);
-        $prop_location = $property->location;
-        $sugg_properties = Property::where('location', '=', $prop_location)
-                                    ->where('id', '!=', $property->id)
-                                    ->orWhere('purpose', '=', $property->purpose)
-                                    ->get();
-        if(count($sugg_properties) < 1){
-            $sugg_properties = Property::where('purpose', '=', $property->purpose)->where('id', '!=', $property->id)->get();
-        }
-
+        $images = Image::find($property->image);
+        $sugg_properties = Property::suggestedProperties($property);
         return view('BuyerViews.Showdetails')
                     ->with('property', $property)
+                    ->with('images', $images)
                     ->with('suggested_properties', $sugg_properties);       
     }
 
     public function filter(Request $request){
-        $location = $request->filteroptions;
-        $status = $request->filter_status;
-        $max_price = $request->t_max_price;
-        $min_price = $request->t_min_price;
         /*
         TODO: Add functionality to redirect if values are null
         */
-        $filter_properties = DB::table('properties')
-                                ->select('*')
-                                ->where('location', '=', $location)
-                                ->orWhere('purpose', '=', $status)
-                                ->orWhereBetween('price', [$min_price, $max_price])
-                                ->orderBy('price', 'desc')
-                                ->get();
-            
+        $filter_properties = Property::filterProperties($request);
+                                
         $locations = DB::table('properties')
                         ->select('location')
                         ->get();
         $unique_locations = $locations->unique('location');
-
         if (count($filter_properties) > 0) {
             return view('BuyerViews.filter')
                         ->with('properties', $filter_properties)

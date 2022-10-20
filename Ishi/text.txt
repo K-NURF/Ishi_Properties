@@ -1,0 +1,14 @@
+Schema::create('properties', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->string('name');
+            $table->string('address');
+            $table->string('location');
+            $table->string('type');
+            $table->string('purpose');
+            $table->double('price', 24, 2);
+            $table->longtext('description');
+            $table->string('website')->nullable();
+            $table->string('image')->nullable();
+            $table->timestamps();
+        });

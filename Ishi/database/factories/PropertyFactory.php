@@ -16,17 +16,18 @@ class PropertyFactory extends Factory
      */
     public function definition()
     {
+        $price = fake()->numberBetween(5000, 21474836);
         return [
             'name' => $this->faker->sentence(),
-            'user_id' => fake()->numberBetween(1, 12),
+            'user_id' => fake()->numberBetween(1, 7),
             'address' => fake()->address(),
             'location' => fake()->city(),
             'type' => 'mansion',
             'purpose' => 'Rent',
-            'price' => fake()->numerify('#######.##'),
+            'price' => number_format($price, 2, '.', ','),
             'description' => $this->faker->paragraph(5),
             'website' => $this->faker->url(),
-            'image' => 'download.jpg',
+            'image' => fake()->numberBetween(1, 5),
         ];
     }
 }

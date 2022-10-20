@@ -61,7 +61,7 @@
 
             @foreach ($properties as $property)
                 <div class="hse">
-                    <img src="{{ asset('/images/' . $property->image) }}" alt="img1">
+                    <img src="{{ asset('/images/' . $property->Outdoor) }}" alt="img1">
                     <label>Name: {{ $property->name }}</label>
                     <label for="">status: {{ $property->purpose }}</label>
                     <p>{{ $property->location }}, {{ $property->address }}</p>

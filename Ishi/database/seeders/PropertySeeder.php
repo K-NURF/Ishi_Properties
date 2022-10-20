@@ -19,8 +19,7 @@ class PropertySeeder extends Seeder
     public function run()
     {
         
-        Property::factory(8)->create([
-            //'user_id' => $user->id
+        Property::factory(5)->create([
         ]);
     }
 }
