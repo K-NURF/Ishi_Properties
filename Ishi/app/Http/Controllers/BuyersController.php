@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class BuyersController extends Controller
 {
     public function index(){
-        $properties = Property::all();
+        $properties = Property::latest()->filter(request(['search']))->paginate(4);
         return view('BuyerViews.Buyers')
             ->with('properties', $properties);
     }

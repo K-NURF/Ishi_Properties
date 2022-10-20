@@ -8,6 +8,19 @@
         <form method="POST" action="/users">
           @csrf
           <div class="mb-6">
+            <label for="purpose" class="inline-block text-lg mb-2">Register as:</label>
+            <select class="border border-gray-200 rounded p-2 w-full" name="purpose"
+                value="{{ old('purpose') }}">
+                <option value="">-select-</option>
+                <option value="buyer">Buyer</option>
+                <option value="seller">Seller</option>
+            </select>
+
+            @error('purpose')
+                <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+            @enderror
+        </div>
+          <div class="mb-6">
             <label for="name" class="inline-block text-lg mb-2"> Name </label>
             <input type="text" class="border border-gray-200 rounded p-2 w-full" name="name" value="{{old('name')}}" />
     

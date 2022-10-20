@@ -33,7 +33,7 @@
     <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <nav class="flex justify-between items-center mb-4">
+    <nav class="flex justify-between items-center">
         <a href="/"
             ><img class="w-32 ml-7" src="{{asset('images/ishi (4).png')}}" alt=""
         /></a>
