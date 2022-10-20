@@ -2,7 +2,7 @@
     <link rel="stylesheet" href="{{ asset('css/Show_details.css') }}">
     <div class="home_container">
         <div class="image_container">
-            <img src="{{ asset('/images/' . $property->Image) }}" alt="img">
+            <img src="{{ asset('/images/' . $property->image) }}" alt="img">
         </div>
         <div class="hse_information">
             {{-- <form action="">
@@ -13,41 +13,35 @@
                     <input type="text" class="txtbox" placeholder="Ownercontact information">
                     <textarea class="txtarea" id="" cols="30" rows="10" placeholder="Property description"></textarea>
                 </form> --}}
-            <p><b>Property Name:</b> {{ $property->propertyName }}</p>
-            <p><b>City:</b> {{ $property->propertyLocation }}</p>
-            <p><b>Address:</b> {{ $property->Address }}</p>
+            <p><b>Property Name:</b> {{ $property->name }}</p>
+            <p><b>City:</b> {{ $property->location }}</p>
+            <p><b>Address:</b> {{ $property->address }}</p>
+            <p><b>Price:</b> {{ $property->price }}</p>
             {{-- <textarea class="txtarea" id="" cols="30" rows="10" placeholder="Property description">{{$property->Description}}</textarea> --}}
-            <p> <b>Description:</b> {{ $property->Description }}</p>
+            <p> <b>Description:</b> {{ $property->description }}</p>
             <div class="btnss">
 
-                <button>Back</button>
+                <a href="/properties"><button>Back</button></a>
                 <button>Contact Owner</button>
             </div>
         </div>
         <div class="suggested_properties">
             <div class="sugg_heading">
-                <label for="">Suggested properties in the same area</label>
+                <label for="">Suggested properties</label>
             </div>
-            <div class="more_hse">
-                <div class="the_img">
-                    <img src="" alt="img">
+            @foreach ($suggested_properties as $sugg_property)
+                <div class="more_hse">
+                    <div class="the_img">
+                        <img src="{{ asset('/images/' . $sugg_property->image) }}" alt="img" >
+                    </div>
+                    <div class="more_hse_info">
+                        <label for="">{{$sugg_property->price}}</label>
+                        <label for="">{{$sugg_property->purpose}}</label>
+                        {{-- <label for="">{{$sugg_property->location}}</label> --}}
+                        <a href="/properties/{{ $property->id }}">View</a>
+                    </div>
                 </div>
-                <div class="more_hse_info">
-                    <label for="">Price</label>
-                    <label for="">Status</label>
-                    <a href="">View</a>
-                </div>
-            </div>
-            <div class="more_hse">
-                <div class="the_img">
-                    <img src="" alt="img">
-                </div>
-                <div class="more_hse_info">
-                    <label for="">Price</label>
-                    <label for="">Status</label>
-                    <a href="">View</a>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </x-layout>

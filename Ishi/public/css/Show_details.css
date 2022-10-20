@@ -87,7 +87,7 @@ textarea {
 
 .home_container .suggested_properties {
     background: hsl(0, 2%, 16%, 0.2);
-    width: 26%;
+    width: 30%;
     display: flex;
     padding: 10px;
     flex-direction: column;
@@ -114,14 +114,17 @@ textarea {
 .more_hse .the_img {
     display: flex;
     height: 95%;
-    width: 78%;
+    width: 75%;
+}
+.more_hse .the_img img{
+    width: 100%;
 }
 
 
 .more_hse .more_hse_info {
     display: flex;
     flex-direction: column;
-    margin-left: 5%;
+    margin-left: 0%;
     height: 95%;
     width: 22%;
 }
