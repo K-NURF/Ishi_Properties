@@ -70,7 +70,4 @@
             @endforeach
         </div>
     </div>
-    <div class="mt-6 p-4">
-        {{$properties->links()}}
-    </div>
 </x-layout>
