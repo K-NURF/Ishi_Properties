@@ -3,13 +3,12 @@
         <header class="text-center">
           <h2 class="text-2xl font-bold uppercase mb-1">Register</h2>
           <div>
-            <p class="mb-4">You are registering as an Owner
+            <p class="mb-4">You are registering as a Client
             </p>
-            <a href="/clients/register" class="underline underline-offset-4">Switch</a>
-        </div>
-        </header>
+            <a href="/register" class="underline underline-offset-4">Switch</a>
+        </div>        </header>
     
-        <form method="POST" action="/users">
+        <form method="POST" action="/clients/users">
           @csrf
           <div class="mb-6">
             <label for="name" class="inline-block text-lg mb-2"> Name </label>
