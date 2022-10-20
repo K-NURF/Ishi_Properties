@@ -59,14 +59,7 @@ Route::post('/users/authenticate',[UserController::class,'authenticate']);
     => Create a controller to show the properties.
     => Create a function in the controller to display the individual properties.
 */
-Route::get('/properties', [BuyersController::class, 'index']);
+Route::get('/properties', [BuyersController::class, 'index'])->name('BuyersPage');
 Route::get('/properties/{id}', [BuyersController::class, 'show']);
-// Route::get('/properties/{id}', function($id){
-//     return view('BuyerViews.Showdetails',
-//         ['property' => Property::find($id)]
-//     );
-// })->where('id', '[0-9]+');
-// Route::get('/blah', function(){
-//     return view('BuyerViews.Showdetails');
-// });
+Route::get('/filter', [BuyersController::class, 'filter']);
 
