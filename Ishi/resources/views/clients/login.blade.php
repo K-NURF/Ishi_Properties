@@ -1,29 +1,20 @@
-<html lang="en">
- <head>
-    <meta charset="UTF-8">
-    <title>Login form</title>
-    <link rel="stylesheet" href="css/login1.css">
-    <link rel="stylesheet" href="../css/login1.css">
-
- </head>
- <body>
-       <form method="POST" action="/clients/authenticate">
-      <div class=display>
-     <div class="box">
-      <img src="images/ishi.jpg">
-     </div>
-     <div class="loginbox">
-       <h1>Login</h2>
+<x-layout>
+    <x-card class="p-10 max-w-lg mx-auto mt-12 mb-12">
+        <header class="text-center">
+            <h2 class="text-2xl font-bold uppercase mb-1">Login</h2>
             <div>
                 <p class="mb-4">You are logging in as a Client
                 </p>
-                <a href="/login">Switch</a>
+                <a href="/login" class="underline underline-offset-4">Switch</a>
             </div>
+        </header>
+
+        <form method="POST" action="/clients/authenticate">
             @csrf
 
             <div class="mb-6">
-                <label for="email">Email</label>
-                <input type="email" name="email"
+                <label for="email" class="inline-block text-lg mb-2">Email</label>
+                <input type="email" class="border border-gray-200 rounded p-2 w-full" name="email"
                     value="{{ old('email') }}" />
 
                 @error('email')
@@ -32,10 +23,10 @@
             </div>
 
             <div class="mb-6">
-                <label for="password">
+                <label for="password" class="inline-block text-lg mb-2">
                     Password
                 </label>
-                <input type="password"name="password"
+                <input type="password" class="border border-gray-200 rounded p-2 w-full" name="password"
                     value="{{ old('password') }}" />
 
                 @error('password')
@@ -44,7 +35,7 @@
             </div>
 
             <div class="mb-6">
-                <button type="submit">
+                <button type="submit" class="bg-blue-300 text-white rounded py-2 px-4 hover:bg-blue-600">
                     Sign in
                 </button>
             </div>
@@ -52,12 +43,9 @@
             <div class="mt-8">
                 <p>
                     Don't have an account?
-                    <a href="/clients/register">Register</a>
+                    <a href="/clients/register" class="text-blue-600">Register</a>
                 </p>
             </div>
         </form>
-    </div> 
-    </div>
-   </body>
-</html>
-
+    </x-card>
+</x-layout>
