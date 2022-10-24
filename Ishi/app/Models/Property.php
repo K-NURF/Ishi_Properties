@@ -31,6 +31,6 @@ class Property extends Model
 
     //relationship to owner
     public function owner() {
-        return $this->belongsTo(User::class, 'owner_id');
+        return $this->belongsTo(User::class, 'user_id');
     }
 }

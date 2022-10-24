@@ -44,6 +44,6 @@ class User extends Authenticatable
 
     //relationship with properties
     public function properties() {
-        return $this->hasMany(Property::class, 'owner_id');
+        return $this->hasMany(Property::class, 'user_id');
     }
 }

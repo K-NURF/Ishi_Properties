@@ -50,7 +50,7 @@
             <li><a href="/">Home</a></li>
             <li><a href="/contactUs">Contact us</a></li> 
             @auth
-            <li><a href="/properties/manage"><i class="fa-solid fa-gear"></i> Manage Properties</a></li>
+            <li><a href="/property/manage"><i class="fa-solid fa-gear"></i> Manage Properties</a></li>
 
             <li>
                 <form class="inline"method="POST" action="/logout">

@@ -39,6 +39,9 @@ Route::get('/property/all', [PropertyController::class, 'index']);
 //show property Details
 Route::get('/property/details', [PropertyController::class, 'details']);
 
+//manage property
+Route::get('/property/manage', [PropertyController::class, 'manage'])->middleware('auth');
+
 //show owners register form
 Route::get('/register',[UserController::class,'create'])->middleware('guest');
 
@@ -83,3 +86,4 @@ Route::get('/properties/{id}', [BuyersController::class, 'show']);
 //     return view('BuyerViews.ShowDetails');
 // });
 
+Route::get('blah2', [PropertyController::class, 'manage']);
