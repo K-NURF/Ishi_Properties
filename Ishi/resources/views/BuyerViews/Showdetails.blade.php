@@ -2,7 +2,8 @@
     <link rel="stylesheet" href="{{ asset('css/Show_details.css') }}">
     <div class="home_container">
         <div class="image_container">
-            <img src="{{ asset('/images/' . $property->image) }}" alt="img">
+            <img src="{{ $property->image ? asset('/images/'.$property->logo) : asset('images/no-image.jpg') }}" alt="img">
+
         </div>
         <div class="hse_information">
             {{-- <form action="">
