@@ -22,6 +22,7 @@ class PropertyController extends Controller
             'location' => 'required',
             'type' => 'required',
             'purpose' => 'required',
+            'price' => 'required',
             'website'=> 'nullable',
             'description' => 'nullable'
         ]);
@@ -37,7 +38,7 @@ class PropertyController extends Controller
         return redirect('/')->with('message', 'Property added successfully');
     }
 
-    //show all properties
+    //show all properties for an owner
     public function index(){
         return view('properties.index', ['properties' => Property::latest()->filter(request(['search']))->paginate(6)
         
