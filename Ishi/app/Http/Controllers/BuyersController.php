@@ -10,7 +10,7 @@ class BuyersController extends Controller
 {
     public function index(){
 
-        $properties = Property::get();
+        $properties = Property::latest()->paginate(5);
         
         $locations = DB::table('properties')
                         ->select('location')
