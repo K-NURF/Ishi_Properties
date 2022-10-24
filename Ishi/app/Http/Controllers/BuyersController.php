@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\DB;
 class BuyersController extends Controller
 {
     public function index(){
+
         $properties = Property::get();
         
         $locations = DB::table('properties')

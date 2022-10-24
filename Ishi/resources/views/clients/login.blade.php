@@ -3,13 +3,13 @@
         <header class="text-center">
             <h2 class="text-2xl font-bold uppercase mb-1">Login</h2>
             <div>
-                <p class="mb-4">You are logging in as an Owner
+                <p class="mb-4">You are logging in as a Client
                 </p>
-                <a href="/clients/login" class="underline underline-offset-4">Switch</a>
+                <a href="/login" class="underline underline-offset-4">Switch</a>
             </div>
         </header>
 
-        <form method="POST" action="/users/authenticate">
+        <form method="POST" action="/clients/authenticate">
             @csrf
 
             <div class="mb-6">
@@ -43,7 +43,7 @@
             <div class="mt-8">
                 <p>
                     Don't have an account?
-                    <a href="/register" class="text-blue-600">Register</a>
+                    <a href="/clients/register" class="text-blue-600">Register</a>
                 </p>
             </div>
         </form>
