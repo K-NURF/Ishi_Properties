@@ -44,14 +44,8 @@ Route::get('/property/manage', [PropertyController::class, 'manage'])->middlewar
 
 //show owner owners register form
 Route::get('/owner/register',[UserController::class,'createOwner'])->middleware('guest');
-//show client register form
+//show buyer register form
 Route::get('/buyer/register',[UserController::class,'createBuyer'])->middleware('guest');
-
-//show clients register form
-Route::get('/clients/register',[CLientsController::class,'create'])->middleware('guest');
-
-//create client new user
-Route::post('/clients/users', [ClientsController::class, 'store']);
 
 //create owner new user
 Route::post('/users', [UserController::class, 'store']);
