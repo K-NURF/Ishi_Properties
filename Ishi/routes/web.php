@@ -38,8 +38,10 @@ Route::get('/property/all', [PropertyController::class, 'index']);
 //show propery Details
 Route::get('/property/details', [PropertyController::class, 'details']);
 
-//show register form
-Route::get('/register',[UserController::class,'create'])->middleware('guest');
+//show owner register form
+Route::get('/owner/register',[UserController::class,'createOwner'])->middleware('guest');
+//show client register form
+Route::get('/buyer/register',[UserController::class,'createBuyer'])->middleware('guest');
 
 //create new user
 Route::post('/users', [UserController::class, 'store']);
