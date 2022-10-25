@@ -26,7 +26,7 @@ class PropertyFactory extends Factory
             'price' => fake()->numerify('#######.##'),
             'description' => $this->faker->paragraph(5),
             'website' => $this->faker->url(),
-            'image' => 'download.jpg',
+            'image' => '',
         ];
     }
 }
