@@ -3,9 +3,10 @@
         <header class="text-center">
             <h2 class="text-2xl font-bold uppercase mb-1">Login</h2>
             <div>
-                <p class="mb-4">You are logging in as an Owner
+                <p class="mb-4">
+                    Login
                 </p>
-                <a href="/clients/login" class="underline underline-offset-4">Switch</a>
+                
             </div>
         </header>
 
