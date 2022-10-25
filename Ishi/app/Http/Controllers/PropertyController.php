@@ -11,7 +11,7 @@ class PropertyController extends Controller
 {
     //show create form
     public function create(){
-        return view('properties.create');
+        return view('owners.create');
     }
 
     //store property data
@@ -40,14 +40,14 @@ class PropertyController extends Controller
 
     //show all properties for an owner
     public function index(){
-        return view('properties.index', ['properties' => Property::latest()->filter(request(['search']))->paginate(6)
+        return view('owners.index', ['properties' => Property::latest()->filter(request(['search']))->paginate(6)
         
     ]);
     }
 
     //show details of properties
     public function details(){
-        return view('properties.show');
+        return view('owners.show');
     }
 
     //manage property

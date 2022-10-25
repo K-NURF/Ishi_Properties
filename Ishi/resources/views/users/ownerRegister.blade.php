@@ -3,12 +3,13 @@
         <header class="text-center">
           <h2 class="text-2xl font-bold uppercase mb-1">Register</h2>
           <div>
-            <p class="mb-4">You are registering as a Client
+            <p class="mb-4">You are registering as an Owner
             </p>
-            <a href="/register" class="underline underline-offset-4">Switch</a>
-        </div>        </header>
+            <a href="/clients/register" class="underline underline-offset-4">Switch</a>
+        </div>
+        </header>
     
-        <form method="POST" action="/clients/users">
+        <form method="POST" action="/users">
           @csrf
           <div class="mb-6">
             <label for="name" class="inline-block text-lg mb-2"> Name </label>
@@ -27,6 +28,8 @@
             <p class="text-red-500 text-xs mt-1">{{$message}}</p>
             @enderror
           </div>
+
+          <input type="hidden" name="role" value="owner">
     
           <div class="mb-6">
             <label for="password" class="inline-block text-lg mb-2">
