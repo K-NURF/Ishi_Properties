@@ -42,8 +42,8 @@
 
             <div class="mt-8">
                 <p>
-                    Don't have an account?
-                    <a href="/register" class="text-blue-600">Register</a>
+                    Don't have an account? <span class="text-blue-400">Click register on navigation bar  <i class="fa fa-arrow-up"></i>
+                    </span>
                 </p>
             </div>
         </form>

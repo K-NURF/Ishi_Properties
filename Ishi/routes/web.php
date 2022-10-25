@@ -42,14 +42,10 @@ Route::get('/property/details', [PropertyController::class, 'details']);
 //manage property
 Route::get('/property/manage', [PropertyController::class, 'manage'])->middleware('auth');
 
-//show owners register form
-Route::get('/register',[UserController::class,'create'])->middleware('guest');
-
-//show clients register form
-Route::get('/clients/register',[CLientsController::class,'create'])->middleware('guest');
-
-//create client new user
-Route::post('/clients/users', [ClientsController::class, 'store']);
+//show owner owners register form
+Route::get('/owner/register',[UserController::class,'createOwner'])->middleware('guest');
+//show buyer register form
+Route::get('/buyer/register',[UserController::class,'createBuyer'])->middleware('guest');
 
 //create owner new user
 Route::post('/users', [UserController::class, 'store']);

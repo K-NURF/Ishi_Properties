@@ -1,4 +1,4 @@
-<x-layout>
+<x-ownerLayout>
     <x-card class="p-10 max-w-lg mx-auto mt-24">
         <header class="text-center">
             <h2 class="text-2xl font-bold mb-1">
@@ -66,6 +66,15 @@
                 @enderror
             </div>
             <div class="mb-6">
+                <label for="price" class="inline-block text-lg mb-2">Property Price</label>
+                <input type="text" class="border border-gray-200 rounded p-2 w-full" name="price"
+                    value="{{ old('price') }}" />
+
+                @error('price')
+                    <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+                @enderror
+            </div>
+            <div class="mb-6">
                 <label for="website" class="inline-block text-lg mb-2">Property Website</label>
                 <input type="text" class="border border-gray-200 rounded p-2 w-full" name="website"
                     value="{{ old('website') }}" />
@@ -76,7 +85,37 @@
             </div>
             <div class="mb-6">
                 <label for="image" class="inline-block text-lg mb-2">
-                    Images
+                   Outdoor Image
+                </label>
+                <input
+                    type="file"
+                    class="border border-gray-200 rounded p-2 w-full"
+                    name="image"
+        
+                />
+        
+                @error('image')
+                    <p class="text-red-500 text-xs mt-1">{{$message}}</p>
+                @enderror
+            </div>
+            <div class="mb-6">
+                <label for="image" class="inline-block text-lg mb-2">
+                   Kitchen Image
+                </label>
+                <input
+                    type="file"
+                    class="border border-gray-200 rounded p-2 w-full"
+                    name="image"
+        
+                />
+        
+                @error('image')
+                    <p class="text-red-500 text-xs mt-1">{{$message}}</p>
+                @enderror
+            </div>
+            <div class="mb-6">
+                <label for="image" class="inline-block text-lg mb-2">
+                   Bedroom Image
                 </label>
                 <input
                     type="file"
@@ -121,4 +160,4 @@
             </div>
         </form>
     </x-card>
-</x-layout>
+</x-ownerLayout>

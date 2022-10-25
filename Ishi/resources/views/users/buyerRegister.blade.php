@@ -2,11 +2,7 @@
     <x-card class="p-10 max-w-lg mx-auto mt-12 mb-12">
         <header class="text-center">
           <h2 class="text-2xl font-bold uppercase mb-1">Register</h2>
-          <div>
-            <p class="mb-4">You are registering as an Owner
-            </p>
-            <a href="/clients/register" class="underline underline-offset-4">Switch</a>
-        </div>
+          <p class="mb-4">Create a buyer account to continue</p>
         </header>
     
         <form method="POST" action="/users">
@@ -28,6 +24,7 @@
             <p class="text-red-500 text-xs mt-1">{{$message}}</p>
             @enderror
           </div>
+          <input type="hidden"name="role"value="buyer">
     
           <div class="mb-6">
             <label for="password" class="inline-block text-lg mb-2">

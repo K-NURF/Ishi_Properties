@@ -1,4 +1,4 @@
-<x-layout>
+<x-ownerLayout>
     @include('partials._search')
 
     <div class="lg:grid lg:grid-cols-2 gap-5 space-y-4 md:space-y-0 mr-4 ml-64">
@@ -14,4 +14,4 @@
     <div class="mt-6 p-4">
         {{$properties->links()}}
     </div>
-</x-layout>
+</x-ownerLayout>
