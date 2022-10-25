@@ -19,7 +19,7 @@ class UserController extends Controller
     //create new user
     public function  store(Request $request){
         $dataFields = $request->validate([
-           
+        
             'name' =>['required','min:3'],
             'email' =>['required','email',Rule::unique('users','email')],
             'password' =>['required','confirmed','min:6'],
