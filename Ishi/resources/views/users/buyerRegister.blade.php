@@ -1,8 +1,8 @@
 <x-layout>
     <x-card class="p-10 max-w-lg mx-auto mt-12 mb-12">
         <header class="text-center">
-          <h2 class="text-2xl font-bold uppercase mb-1">Register</h2>
-          <p class="mb-4">Create an owner account to continue</p>
+          <h2 class="text-2xl font-bold uppercase mb-1">Client Register</h2>
+          <p class="mb-4">register to continue</p>
         </header>
     
         <form method="POST" action="/users">
@@ -24,8 +24,7 @@
             <p class="text-red-500 text-xs mt-1">{{$message}}</p>
             @enderror
           </div>
-
-          <input type="hidden" name="role" value="owner">
+          <input type="hidden"name="role"value="buyer">
     
           <div class="mb-6">
             <label for="password" class="inline-block text-lg mb-2">

@@ -62,8 +62,13 @@
             </li>
             @else
             <li>
-                <a href="/register" class="hover:text-blue-400"
-                    ><i class="fa-solid fa-user-plus"></i> Register</a
+                <a href="/buyer/register" class="hover:text-blue-400"
+                    ><i class="fa-solid fa-user-plus"></i> Buyer Register</a
+                >
+            </li>
+            <li>
+                <a href="/owner/register" class="hover:text-blue-400"
+                    ><i class="fa-solid fa-user-plus"></i>Owner Register</a
                 >
             </li>
             <li>
