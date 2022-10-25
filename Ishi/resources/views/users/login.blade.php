@@ -3,10 +3,9 @@
         <header class="text-center">
             <h2 class="text-2xl font-bold uppercase mb-1">Login</h2>
             <div>
-                <p class="mb-4">
-                    Login
+                <p class="mb-4">You are logging in as an Owner
                 </p>
-                
+                <a href="/clients/login" class="underline underline-offset-4">Switch</a>
             </div>
         </header>
 
@@ -43,8 +42,8 @@
 
             <div class="mt-8">
                 <p>
-                    Don't have an account?
-                    <a href="/register" class="text-blue-600">Register</a>
+                    Don't have an account? <span class="text-blue-400">Click register on navigation bar  <i class="fa fa-arrow-up"></i>
+                    </span>
                 </p>
             </div>
         </form>
