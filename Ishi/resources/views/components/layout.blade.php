@@ -33,7 +33,7 @@
     <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <nav class="flex justify-between items-center mb-4">
+    <nav class="flex justify-between items-center">
         <a href="/"
             ><img class="w-32 ml-7" src="{{asset('images/ishi (4).png')}}" alt=""
         /></a>
@@ -50,7 +50,7 @@
             <li><a href="/">Home</a></li>
             <li><a href="/contactUs">Contact us</a></li> 
             @auth
-            <li><a href="/properties/manage"><i class="fa-solid fa-gear"></i> Manage Properties</a></li>
+            <li><a href="/property/manage"><i class="fa-solid fa-gear"></i> Manage Properties</a></li>
 
             <li>
                 <form class="inline"method="POST" action="/logout">

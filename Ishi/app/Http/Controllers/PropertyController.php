@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Property;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\DB;
 
 class PropertyController extends Controller
 {
@@ -46,5 +47,14 @@ class PropertyController extends Controller
     //show details of properties
     public function details(){
         return view('properties.show');
+    }
+
+    //manage property
+    public function manage(){
+        // $id = auth()->id();
+        // $properties = DB::table('properties')->join('users', 'properties.user_id', '=', $id);
+        // return $properties;
+        $properties = [auth()->user()->properties()->get()];
+        return $properties;
     }
 }

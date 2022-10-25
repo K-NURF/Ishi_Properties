@@ -35,7 +35,7 @@ class UserController extends Controller
         //login
         auth()->login($user);
 
-        return redirect('/')->with('message','user created and logged in');
+        return redirect('/property/all')->with('message','Account created and logged in successfully!');
 
     }
 
@@ -50,7 +50,6 @@ class UserController extends Controller
     }
 
     //show login form
-
     public function login(){
         return view('users.login');
 
@@ -67,7 +66,7 @@ class UserController extends Controller
 
         if(auth()->attempt($dataFields)){
             $request->session()->regenerate();
-            return redirect('/')->with('message','you are now logged in !');
+            return redirect('/property/all')->with('message','you are now logged in !');
         }
         return back()->withErrors(['email'=>'Invalid Credential'])->onlyInput('email');
     }
