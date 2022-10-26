@@ -72,9 +72,11 @@
                 </div>
             @endforeach
         </div>
+        
     </div>
-    <div class="p-4">
+    
+    <div class="">
         {{$properties->links()}}
     </div>
-
+    <br>
 </x-layout>

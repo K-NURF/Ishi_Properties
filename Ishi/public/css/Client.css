@@ -64,8 +64,9 @@
 }
 
 .home_container .filter .price_filter .tb_price_filter {
-    width: 50px;
+    width: 70px;
     height: 25px;
+    border: 2px solid black;
 }
 
 .hse_details {
