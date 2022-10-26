@@ -115,7 +115,7 @@
                 <h4>Online services </h4>
                 <ul>
                     <li><a href="#">Rentals</a></li>
-                    <li><a href="/property/all">Property management</a></li>
+                    <li><a href="/property">Property management</a></li>
                     <li><a href="#">Leasing</a></li>
                     <li><a href="#">Online purchase</a></li>
                 </ul>

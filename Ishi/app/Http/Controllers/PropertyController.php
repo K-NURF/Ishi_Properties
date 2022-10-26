@@ -67,16 +67,8 @@ class PropertyController extends Controller
     }
 
     //show details of properties
-    public function details(){
-        return view('owners.show');
+    public function show(Property $property){
+        return view('owners.show', ['property' => $property]);
     }
 
-    //manage property
-    public function manage(){
-        // $id = auth()->id();
-        // $properties = DB::table('properties')->join('users', 'properties.user_id', '=', $id);
-        // return $properties;
-        $properties = [auth()->user()->properties()->get()];
-        return $properties;
-    }
 }

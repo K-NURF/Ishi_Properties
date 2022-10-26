@@ -5,7 +5,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TempController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\BuyersController;
-use App\Http\Controllers\ClientsController;
 use App\Http\Controllers\PropertyController;
 
 /*
@@ -34,13 +33,13 @@ Route::get('/property/create', [PropertyController::class, 'create'])->middlewar
 Route::post('/property', [PropertyController::class, 'store'])->middleware('auth');
 
 //show all Properties
-Route::get('/property/all', [PropertyController::class, 'index']);
+Route::get('/property', [PropertyController::class, 'index'])->middleware('auth');
 
 //show property Details
-Route::get('/property/details', [PropertyController::class, 'details']);
+Route::get('/property/details', [PropertyController::class, 'details'])->middleware('auth');
 
 //manage property
-Route::get('/property/manage', [PropertyController::class, 'manage'])->middleware('auth');
+Route::get('/property/{property}', [PropertyController::class, 'show'])->middleware('auth');
 
 //show owner owners register form
 Route::get('/owner/register',[UserController::class,'createOwner'])->middleware('guest');
@@ -48,31 +47,23 @@ Route::get('/owner/register',[UserController::class,'createOwner'])->middleware(
 Route::get('/buyer/register',[UserController::class,'createBuyer'])->middleware('guest');
 
 //create owner new user
-Route::post('/users', [UserController::class, 'store']);
+Route::post('/users', [UserController::class, 'store'])->middleware('guest');
 
 //log user out
 Route::post('/logout', [UserController::class, 'logout'])->middleware('auth');
 
-//show Owners login form
+//show login form
 Route::get('/login',[UserController::class,'login'])->name('login')->middleware('guest');
 
-//show client login form
-Route::get('/clients/login',[ClientsController::class,'login'])->middleware('guest');
-
-//login owner user
+//login user
 Route::post('/users/authenticate',[UserController::class,'authenticate']);
-
-//login client user
-Route::post('/clients/authenticate',[ClientsController::class,'authenticate']);
-
-
 
 /*  TODO on Buyer Page
     => Create a controller to show the properties.
     => Create a function in the controller to display the individual properties.
 */
-Route::get('/properties', [BuyersController::class, 'index'])->name('BuyersPage');
-Route::get('/properties/{id}', [BuyersController::class, 'show']);
+Route::get('/properties', [BuyersController::class, 'index'])->name('BuyersPage')->middleware('auth');
+Route::get('/properties/{id}', [BuyersController::class, 'show'])->middleware('auth');
 // Route::get('/properties/{id}', function($id){
 //     return view('BuyerViews.ShowDetails',
 //         ['property' => Property::find($id)]
@@ -81,6 +72,6 @@ Route::get('/properties/{id}', [BuyersController::class, 'show']);
 // Route::get('/blah', function(){
 //     return view('BuyerViews.ShowDetails');
 // });
-Route::get('/filter', [BuyersController::class, 'filter']);
+Route::get('/filter', [BuyersController::class, 'filter'])->middleware('auth');
 
-Route::get('blah2', [PropertyController::class, 'manage']);
+Route::get('blah2', [PropertyController::class, 'manage'])->middleware('auth');
