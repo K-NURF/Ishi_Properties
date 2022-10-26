@@ -58,7 +58,6 @@
         </div>
         <!--HOUSE DETAILS-->
         <div class="hse_details">
-
             @foreach ($properties as $property)
                 <div class="hse">
                     <img src="{{ $property->cover_image ? asset('storage/'.$property->cover_image) : asset('images/no-image.jpg') }}" alt="img1">
