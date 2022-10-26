@@ -99,6 +99,12 @@
     <div class="mx-4">
         <x-card class="p-10">
             <div class="flex flex-col items-center justify-center text-center">
+                <h3 class="text-3xl font-bold mb-2">
+                    {{ $property->name }}
+                </h3>
+                <div class="text-xl">{{ $property->type }}</div>
+
+                <p class="underline">Click image to enlarge</p>
                 <!-- The grid: four columns -->
                 <div class="row">
                     <div class="column">
@@ -159,17 +165,12 @@
                 </div>
 
 
-                <h3 class="text-2xl mb-2">
-                    {{ $property->name }}
-                </h3>
-
-                <div class="text-xl">{{ $property->type }}</div>
                 <div>
                     <p>You are {{ $property->purpose }}ing this property at Ksh{{ $property->price }}</p>
                 </div>
 
                 <div class="text-lg my-4">
-                    <i class="fa-solid fa-location-dot"></i> {{ $property->address }} {{ $property->location }}
+                    <i class="fa-solid fa-location-dot"></i> {{ $property->address }}, {{ $property->location }}
                 </div>
                 <div>
 
