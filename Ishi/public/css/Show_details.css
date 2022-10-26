@@ -1,155 +1,121 @@
-
-/*Home Screen*/
-.home_container {
-    display: flex;
-    flex-direction: row;
-    align-self: center;
-    width: 100%;
-    margin-top: 3.5%;
-    position: relative;
-    outline: medium none;
-    min-height: 150vh;
-    padding: 20px;
-}
-
-.home_container .image_container {
-    margin-left: 2%;
-    width: 35%;
-    border-radius: 10px;
-    border: none;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-}
-
-.image_container img {
-    position: relative;
-    width: 100%;
-}
-
-.home_container .hse_information {
-    margin-left: 2%;
-    background-color: none;
-    width: 30%;
-    height: 500px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-
-}
-
-.hse_information .txtbox {
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-    width: 80%;
-    margin-bottom: 10px;
-
-}
-
-.hse_information form input:hover {
-    background: aliceblue;
-    color: black;
-    box-shadow: 0 0 30px hsl(208, 100%, 97%, 0.7);
-}
-
-.hse_information .txtarea {
-    border-radius: 5px;
-    border: none;
-    width: 95%;
-}
-
-textarea {
-    resize: none;
-}
-
-.hse_information form textarea:hover {
-    background: aliceblue;
-    color: black;
-    box-shadow: 0 0 30px hsl(208, 100%, 97%, 0.7);
-}
-
-.hse_information .btnss {
-    width: 100%;
-    padding: 10px;
-}
-
-.hse_information .btnss button {
-    width: 30%;
-    border: none;
-    background: hsl(0, 3%, 18%);
-    color: aliceblue;
-    border-radius: 15px;
-    padding: 8px 5px;
+b{
     text-transform: uppercase;
 }
-
-.home_container .suggested_properties {
-    background: hsl(0, 2%, 16%, 0.2);
-    width: 30%;
-    display: flex;
-    padding: 10px;
-    flex-direction: column;
-    border-radius: 10px;
+.home_container {
+    width: 100%;
+    min-height: 120vh;
+    background: rgba(103, 126, 252, 0.5);
+    margin-bottom: 0;
+}
+.home_container h1{
     display: flex;
     align-items: center;
-    justify-content: first-baseline;
-}
-
-.suggested_properties .sugg_heading {
-    padding: 10px;
-    font-weight: 500;
-}
-
-.suggested_properties .more_hse {
-    padding: 10px;
-    display: flex;
-    border: 2px solid black;
-    border-radius: 10px;
-    margin-top: 15px;
-    width: 80%;
-}
-
-.more_hse .the_img {
-    display: flex;
-    height: 95%;
-    width: 75%;
-}
-.more_hse .the_img img{
-    width: 100%;
-}
-
-
-.more_hse .more_hse_info {
-    display: flex;
-    flex-direction: column;
-    margin-left: 0%;
-    height: 95%;
-    width: 22%;
-}
-
-.more_hse .more_hse_info a {
-    border: none;
-    background: rgb(90, 98, 105);
-    color: black;
-    border-radius: 15px;
-    text-align: center;
-    padding: 8px;
+    justify-content: center;
     text-transform: uppercase;
     font-weight: 600;
-    margin-top: 20px;
+    font-size: 30px;
+    padding: 5px;
+}
+.home_container .parent {
+    display:grid;
+    grid-template-columns: 1fr 0.8fr;
+    margin: 1rem;
+    padding: 1rem;
+    height: 40vh;
+    margin-bottom: 0;
+    justify-content: center;
+    min-height: 60vh;
+}
+.home_container .parent .image_container{
+    display: flex;
+    justify-items: center;
+    align-content: center;
+    margin: 5px;
 }
 
-.more_hse .more_hse_info a:hover {
-    letter-spacing: 0.25em;
-    background: hsl(240, 47%, 58%);
-    color: aliceblue;
-    box-shadow: 0 0 30px hsl(240, 23%, 58%);
-    transition: 0.3s ease-in-out;
+.home_container .parent .hse_information p{
+    padding: 10px;
 }
 
-.more_hse .more_hse_info label {
+.home_container .parent .hse_information .btnss a, button {
+    background: rgb(58, 58, 94, 0.4);
+    border-radius: 5px;
+    padding: 8px;
+    margin: 0.8rem;
+    text-transform: uppercase;
     font-weight: 500;
-    padding: 4px;
+    transition: all 300ms ease;
+}
+
+.home_container .parent .hse_information .btnss a:hover, button:hover {
+    font-size: 20px;
+    background: rgb(58, 58, 94);
+    color: aliceblue;
+}
+
+
+.home_container .suggested_properties {
+    border: 1px solid black;
+    border-radius: 1rem;
+    margin: 1rem;
+    padding: 1rem;
+    margin-top: 0;
+    background: rgba(120, 120, 246, 0.5);
+}
+
+.home_container .suggested_properties .sugg_heading {
+    display: flex;
+    margin: 2rem;
+    align-self: center;
+    justify-content: center;
+
+}
+
+.home_container .suggested_properties .sugg_heading label {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 30px;
+    border-bottom: 1px solid black;
+    letter-spacing: 0.1rem;
+}
+
+.home_container .suggested_properties .detailss {
+    display: grid;
+    grid-template-columns: repeat(3, 0.5fr);
+}
+
+.home_container .suggested_properties .detailss .morestuff {
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.home_container .suggested_properties .detailss .morestuff .the_img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.home_container .suggested_properties .detailss .morestuff .more_hse_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(103, 126, 252, 0.5);
+    border-radius: 5px;
+}
+
+.home_container .suggested_properties .detailss .morestuff .more_hse_info a {
+    background: rgb(58, 58, 94, 0.4);
+    border-radius: 5px;
+    padding: 5px;
+    margin: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: all 300ms ease;
+}
+
+.home_container .suggested_properties .detailss .morestuff .more_hse_info a:hover {
+    font-size: 20px;
+    background: rgb(58, 58, 94);
+    color: aliceblue;
 }
