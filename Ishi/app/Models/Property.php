@@ -19,7 +19,13 @@ class Property extends Model
         'price',
         'website',
         'description',
-        'image'
+        'cover_image',
+        'outdoor_image',
+        'kitchen_image',
+        'bedroom_image',
+        'bathroom_image',
+        'living_image',
+        'other_image'
     ];
 
     public function scopeFilter($query, array $filters) {
@@ -33,6 +39,6 @@ class Property extends Model
 
     //relationship to owner
     public function owner() {
-        return $this->belongsTo(User::class, 'owner_id');
+        return $this->belongsTo(User::class, 'user_id');
     }
 }

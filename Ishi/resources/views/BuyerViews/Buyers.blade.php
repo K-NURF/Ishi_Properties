@@ -1,5 +1,7 @@
 <x-layout>
     <link rel="stylesheet" href="{{ asset('css/Client.css') }}">
+    @include('partials._searchA')
+
     <div class="home_container">
 
         <!--FILTER-->
@@ -61,13 +63,20 @@
 
             @foreach ($properties as $property)
                 <div class="hse">
-                    <img src="{{ asset('/images/' . $property->image) }}" alt="img1">
+                    <img src="{{ $property->cover_image ? asset('storage/'.$property->cover_image) : asset('images/no-image.jpg') }}" alt="img1">
                     <label>Name: {{ $property->name }}</label>
-                    <label for="">status: {{ $property->purpose }}</label>
+                    <label for="">Purpose: {{ $property->purpose }}</label>
+                    <label for="">Type: {{ $property->type }}</label>
                     <p>{{ $property->location }}, {{ $property->address }}</p>
                     <a href="/properties/{{ $property->id }}">Show Details</a>
                 </div>
             @endforeach
         </div>
+        
     </div>
+    
+    <div class="">
+        {{$properties->links()}}
+    </div>
+    <br>
 </x-layout>
