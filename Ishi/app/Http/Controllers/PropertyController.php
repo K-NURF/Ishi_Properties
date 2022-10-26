@@ -40,7 +40,9 @@ class PropertyController extends Controller
 
     //show all properties for an owner
     public function index(){
-        return view('owners.index', ['properties' => Property::latest()->filter(request(['search']))->paginate(6)
+
+        return view('owners.index', ['properties' => auth()->user()->properties()->filter(request(['search']))->paginate(6)
+        // return view('owners.index', ['properties' => Property::latest()
         
     ]);
     }
