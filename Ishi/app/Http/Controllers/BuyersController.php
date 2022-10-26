@@ -54,20 +54,18 @@ class BuyersController extends Controller
                                 ->orWhereBetween('price', [$min_price, $max_price])
                                 ->orderBy('price', 'desc')
                                 ->get();
-            
+         
         $locations = DB::table('properties')
                         ->select('location')
                         ->get();
         $unique_locations = $locations->unique('location');
-
         if (count($filter_properties) > 0) {
             return view('BuyerViews.filter')
                         ->with('properties', $filter_properties)
                         ->with('locations', $unique_locations);
         } else {
-            return "Such empty :(";
+            return redirect()->route('BuyersPage');
         }
-        
         
     }
     

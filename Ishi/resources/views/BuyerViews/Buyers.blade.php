@@ -69,9 +69,13 @@
                     <a href="/properties/{{ $property->id }}">Show Details</a>
                 </div>
             @endforeach
-            {{$properties->links()}}
+            
         </div>
+        
     </div>
-    <div class="mt-6 p-4">
+    
+    <div class="">
+        {{$properties->links()}}
     </div>
+    <br>
 </x-layout>

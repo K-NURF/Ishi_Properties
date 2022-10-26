@@ -58,7 +58,6 @@
         </div>
         <!--HOUSE DETAILS-->
         <div class="hse_details">
-
             @foreach ($properties as $property)
                 <div class="hse">
                     <img src="{{ asset('/images/' . $property->image) }}" alt="img1">
