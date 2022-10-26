@@ -2,7 +2,7 @@
     <link rel="stylesheet" href="{{ asset('css/Show_details.css') }}">
     <div class="home_container">
         <div class="image_container">
-            <img src="{{ asset('/images/'.$property->image) }}" alt="img">
+            <img src="{{ $property->cover_image ? asset('storage/'.$property->cover_image) : asset('images/no-image.jpg') }}" alt="img">
 
         </div>
         <div class="hse_information">

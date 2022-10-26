@@ -2,7 +2,7 @@
 
 <x-card>
         <div class="flex">
-        <img class="hidden w-48 mr-6 md:block" src="{{ $property->image ? asset('storage/'.$property->logo) : asset('images/no-image.jpg') }}" alt="" />
+        <img class="hidden w-48 mr-6 md:block" src="{{ $property->cover_image ? asset('storage/'.$property->cover_image) : asset('images/no-image.jpg') }}" alt="" />
         <div>
             <h3 class="text-2xl">
                 <a href="/property/{{ $property->id }}">{{ $property->name }}</a>

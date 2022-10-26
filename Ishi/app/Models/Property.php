@@ -19,7 +19,13 @@ class Property extends Model
         'price',
         'website',
         'description',
-        'image'
+        'cover_image',
+        'outdoor_image',
+        'kitchen_image',
+        'bedroom_image',
+        'bathroom_image',
+        'living_image',
+        'other_image'
     ];
 
     public function scopeFilter($query, array $filters) {
