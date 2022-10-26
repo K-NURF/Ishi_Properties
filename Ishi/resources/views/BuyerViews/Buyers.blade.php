@@ -63,7 +63,7 @@
 
             @foreach ($properties as $property)
                 <div class="hse">
-                    <img src="{{ $property->image ? asset('storage/'.$property->logo) : asset('images/no-image.jpg') }}" alt="img1">
+                    <img src="{{ $property->cover_image ? asset('storage/'.$property->cover_image) : asset('images/no-image.jpg') }}" alt="img1">
                     <label>Name: {{ $property->name }}</label>
                     <label for="">Purpose: {{ $property->purpose }}</label>
                     <label for="">Type: {{ $property->type }}</label>
