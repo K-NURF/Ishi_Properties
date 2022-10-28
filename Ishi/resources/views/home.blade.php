@@ -9,7 +9,7 @@
       
             <div class="pages">
               <a href="/properties" class="btn">Buy/Rent</a>
-              <a href="/property/all" class="btn">Management/Sell</a>
+              <a href="/property" class="btn">Management/Sell</a>
             </div>
           </div>
         </section>

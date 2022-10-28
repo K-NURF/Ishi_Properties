@@ -85,16 +85,46 @@
             </div>
             <div class="mb-6">
                 <label for="image" class="inline-block text-lg mb-2">
+                   Cover Image
+                </label>
+                <input
+                    type="file"
+                    class="border border-gray-200 rounded p-2 w-full"
+                    name="cover_image"
+        
+                />
+        
+                @error('cover_image')
+                    <p class="text-red-500 text-xs mt-1">{{$message}}</p>
+                @enderror
+            </div>
+            <div class="mb-6">
+                <label for="image" class="inline-block text-lg mb-2">
                    Outdoor Image
                 </label>
                 <input
                     type="file"
                     class="border border-gray-200 rounded p-2 w-full"
-                    name="image"
+                    name="outdoor_image"
         
                 />
         
-                @error('image')
+                @error('outdoor_image')
+                    <p class="text-red-500 text-xs mt-1">{{$message}}</p>
+                @enderror
+            </div>
+            <div class="mb-6">
+                <label for="image" class="inline-block text-lg mb-2">
+                   Bathroom Image
+                </label>
+                <input
+                    type="file"
+                    class="border border-gray-200 rounded p-2 w-full"
+                    name="bathroom_image"
+        
+                />
+        
+                @error('bathroom_image')
                     <p class="text-red-500 text-xs mt-1">{{$message}}</p>
                 @enderror
             </div>
@@ -105,11 +135,11 @@
                 <input
                     type="file"
                     class="border border-gray-200 rounded p-2 w-full"
-                    name="image"
+                    name="kitchen_image"
         
                 />
         
-                @error('image')
+                @error('kitchen_image')
                     <p class="text-red-500 text-xs mt-1">{{$message}}</p>
                 @enderror
             </div>
@@ -120,14 +150,44 @@
                 <input
                     type="file"
                     class="border border-gray-200 rounded p-2 w-full"
-                    name="image"
+                    name="bedroom_image"
         
                 />
         
-                @error('image')
+                @error('bedroom_image')
                     <p class="text-red-500 text-xs mt-1">{{$message}}</p>
                 @enderror
             </div>
+            <div class="mb-6">
+                <label for="image" class="inline-block text-lg mb-2">
+                   Living-Room Image
+                </label>
+                <input
+                    type="file"
+                    class="border border-gray-200 rounded p-2 w-full"
+                    name="living_image"
+        
+                />
+        
+                @error('living_image')
+                    <p class="text-red-500 text-xs mt-1">{{$message}}</p>
+                @enderror
+            </div> 
+            <div class="mb-6">
+                <label for="image" class="inline-block text-lg mb-2">
+                   Other Image
+                </label>
+                <input
+                    type="file"
+                    class="border border-gray-200 rounded p-2 w-full"
+                    name="other_image"
+        
+                />
+        
+                @error('other_image')
+                    <p class="text-red-500 text-xs mt-1">{{$message}}</p>
+                @enderror
+            </div> 
 
             <div class="mb-6">
                 <label

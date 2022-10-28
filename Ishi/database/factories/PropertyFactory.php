@@ -26,7 +26,12 @@ class PropertyFactory extends Factory
             'price' => fake()->numerify('#######.##'),
             'description' => $this->faker->paragraph(5),
             'website' => $this->faker->url(),
-            'image' => '',
+            'outdoor_image' => 'images/outdoor.jpg',
+            'bathroom_image' => 'images/bathroom.jpg',
+            'kitchen_image' => 'images/kitchen.jpg',
+            'bedroom_image' => 'images/bedroom.jpg',
+            'living_image' => 'images/living_room.jpg',
+            'other_image' => 'images/other.jpg'
         ];
     }
 }

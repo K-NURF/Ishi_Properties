@@ -24,7 +24,13 @@ return new class extends Migration
             $table->double('price', 24, 2);
             $table->longtext('description');
             $table->string('website')->nullable();
-            $table->string('image')->nullable();
+            $table->string('cover_image')->nullable();
+            $table->string('outdoor_image')->nullable();
+            $table->string('bathroom_image')->nullable();
+            $table->string('kitchen_image')->nullable();
+            $table->string('bedroom_image')->nullable();
+            $table->string('living_image')->nullable();
+            $table->string('other_image')->nullable();
             $table->timestamps();
         });
     }

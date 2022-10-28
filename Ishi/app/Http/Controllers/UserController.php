@@ -38,7 +38,7 @@ class UserController extends Controller
         //login
         auth()->login($user);
 
-        return redirect('/property/all')->with('message','Account created and logged in successfully!');
+        return redirect('/property')->with('message','Account created and logged in successfully!');
 
     }
 
@@ -78,7 +78,7 @@ class UserController extends Controller
             return redirect('/properties')->with('message','you are now logged in !');
             }
             else{
-            return redirect('/property/all')->with('message','you are now logged in !');
+            return redirect('/property')->with('message','you are now logged in !');
             }
         }
         return back()->withErrors(['email'=>'Invalid Credential'])->onlyInput('email');
