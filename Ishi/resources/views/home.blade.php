@@ -40,8 +40,6 @@
             </ul>
           </div>
         </div>
-        <div class="section3">
-          <img class="mark"  src="images/real-estate-465100_1280.jpg">
-        </div>
+        {{-- <div c  --}}
    
 </x-layout>
