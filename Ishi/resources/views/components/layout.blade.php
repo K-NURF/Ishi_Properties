@@ -154,7 +154,7 @@
                 </div>
             </div>
     </footer>
-    <footer class="w-full flex items-center justify-start font-bold bg-blue-900 text-blue-300 h-20 md:justify-center">
+    <footer class="w-full flex items-center justify-start font-bold bg-blue-900 text-blue-300 h-16 md:justify-center">
 
         <p class="ml-2 mr-64">Copyright &copy; 2022, All Rights reserved</p>
 

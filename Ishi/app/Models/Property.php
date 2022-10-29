@@ -33,6 +33,7 @@ class Property extends Model
         if($filters['search'] ?? false){
             $query->where('name', 'like', '%'. request('search').'%')
             ->orWhere('address', 'like', '%'. request('search').'%')
+            ->orWhere('description', 'like', '%'. request('search').'%')
             ->orWhere('location', 'like', '%'. request('search').'%'); 
         }
     }
