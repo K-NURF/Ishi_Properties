@@ -69,12 +69,9 @@ class UserController extends Controller
 
         if(auth()->attempt($dataFields)){
             $request->session()->regenerate();
-            $id = auth()->id();
-            $role = DB::select('select role from users where id = '.$id);
-            //this is a temporary hack to be able to tell the difference between owner and buyer. The problem is making an equal comparison of 
-            //the role of the user logging with a suitable string
-            $rolebuyer = DB::select('select role from users where id = 1');
-            if($role == $rolebuyer){
+
+            $role = auth()->user()->role;
+            if($role == "buyer"){
             return redirect('/properties')->with('message','you are now logged in !');
             }
             else{
