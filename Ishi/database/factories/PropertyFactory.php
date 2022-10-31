@@ -16,6 +16,7 @@ class PropertyFactory extends Factory
      */
     public function definition()
     {
+        $price = fake()->randomNumber();
         return [
             'name' => $this->faker->sentence(),
             'user_id' => fake()->numberBetween(1, 12),
@@ -23,7 +24,7 @@ class PropertyFactory extends Factory
             'location' => fake()->city(),
             'type' => 'mansion',
             'purpose' => 'Rent',
-            'price' => fake()->numerify('#######.##'),
+            'price' => fake()->numerify(number_format($price,2,',','.')),
             'description' => $this->faker->paragraph(5),
             'website' => $this->faker->url(),
             'outdoor_image' => 'images/outdoor.jpg',
