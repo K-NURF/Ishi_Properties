@@ -1,4 +1,4 @@
-<x-layout>
+<x-buyerLayout>
     <link rel="stylesheet" href="{{ asset('css/Client.css') }}">
     <div class="home_container">
 
@@ -68,5 +68,6 @@
                 </div>
             @endforeach
         </div>
+        
     </div>
-</x-layout>
+</x-buyerLayout>

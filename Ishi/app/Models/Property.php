@@ -28,18 +28,32 @@ class Property extends Model
         'other_image'
     ];
 
-    public function scopeFilter($query, array $filters) {
+    public function scopeFilter($query, array $filters)
+    {
 
-        if($filters['search'] ?? false){
-            $query->where('name', 'like', '%'. request('search').'%')
-            ->orWhere('address', 'like', '%'. request('search').'%')
-            ->orWhere('description', 'like', '%'. request('search').'%')
-            ->orWhere('location', 'like', '%'. request('search').'%'); 
+        if ($filters['search'] ?? false) {
+            $query->where('name', 'like', '%' . request('search') . '%')
+                ->orWhere('address', 'like', '%' . request('search') . '%')
+                ->orWhere('description', 'like', '%' . request('search') . '%')
+                ->orWhere('location', 'like', '%' . request('search') . '%');
         }
     }
 
     //relationship to owner
-    public function owner() {
+    public function owner()
+    {
         return $this->belongsTo(User::class, 'user_id');
+    }
+
+    //relationship with potential_buyers
+    public function potential_buyers()
+    {
+        return $this->hasMany(Potential_buyers::class, 'property_id');
+    }
+
+    //relationship with confirmation
+    public function confirmation()
+    {
+        return $this->hasMany(Confirmation::class, 'property_id');
     }
 }

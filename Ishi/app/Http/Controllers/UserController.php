@@ -38,8 +38,13 @@ class UserController extends Controller
         //login
         auth()->login($user);
 
+        $role = auth()->user()->role;
+        if($role == "buyer"){
+        return redirect('/properties')->with('message','Account created and logged in successfully!');
+        }
+        else{
         return redirect('/property')->with('message','Account created and logged in successfully!');
-
+        }
     }
 
     //logout user

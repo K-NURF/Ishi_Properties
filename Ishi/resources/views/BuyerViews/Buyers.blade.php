@@ -1,4 +1,4 @@
-<x-layout>
+<x-buyerLayout>
     <link rel="stylesheet" href="{{ asset('css/Client.css') }}">
     @include('partials._searchA')
 
@@ -79,4 +79,4 @@
         {{$properties->links()}}
     </div>
     <br>
-</x-layout>
+</x-buyerLayout>

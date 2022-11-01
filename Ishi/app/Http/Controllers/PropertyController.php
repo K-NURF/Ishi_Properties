@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Property;
+use App\Models\Confirmation;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
+use App\Models\Potential_buyers;
 use Illuminate\Support\Facades\DB;
 
 class PropertyController extends Controller
@@ -68,7 +71,35 @@ class PropertyController extends Controller
 
     //show details of properties
     public function show(Property $property){
-        return view('owners.show', ['property' => $property]);
+        $potential_buyers = DB::table('potential_buyers')->where('property_id', $property->id)
+                                                        ->join('users', 'potential_buyers.user_id', '=', 'users.id')
+                                                        ->get();
+        return view('owners.show', ['property' => $property, 'potential_buyers' => $potential_buyers]);
+        
+    }
+
+    //show confirmation form
+    public function confirm(Property $property){
+        return view('owners.confirmation-form', ['property' => $property]);
+    }
+
+    //add to confirmation table
+    public function addConfirm(Request $request){
+        $data = $request->validate([
+            'property_id' => 'required',
+        ]);
+
+        $data2 = $request->validate([
+            'price' => 'required',
+            'communication' => 'required'
+
+        ]);
+        $data['user_id'] = auth()->user()->id;
+
+        Confirmation::firstOrCreate($data, $data2);
+
+        return redirect('/property')->with('message', 'Confirmation successful');
+
     }
 
 }

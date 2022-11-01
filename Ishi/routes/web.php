@@ -6,6 +6,7 @@ use App\Http\Controllers\TempController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\BuyersController;
 use App\Http\Controllers\PropertyController;
+use App\Http\Controllers\Potential_buyersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,11 +39,18 @@ Route::get('/property', [PropertyController::class, 'index'])->middleware('auth'
 //show property Details
 Route::get('/property/details', [PropertyController::class, 'details'])->middleware('auth');
 
+//show confirmation form
+Route::get('/property/confirm/{property}', [PropertyController::class, 'confirm']);
+
+//add to confirmation table
+Route::post('/property/confirm', [PropertyController::class, 'addConfirm']);
+
 //manage property
 Route::get('/property/{property}', [PropertyController::class, 'show'])->middleware('auth');
 
 //show owner owners register form
 Route::get('/owner/register',[UserController::class,'createOwner'])->middleware('guest');
+
 //show buyer register form
 Route::get('/buyer/register',[UserController::class,'createBuyer'])->middleware('guest');
 
@@ -57,6 +65,9 @@ Route::get('/login',[UserController::class,'login'])->name('login')->middleware(
 
 //login user
 Route::post('/users/authenticate',[UserController::class,'authenticate']);
+
+//add property to potential_buyer table
+Route::get('/properties/add/{property}', [Potential_buyersController::class, 'add']); 
 
 /*  TODO on Buyer Page
     => Create a controller to show the properties.

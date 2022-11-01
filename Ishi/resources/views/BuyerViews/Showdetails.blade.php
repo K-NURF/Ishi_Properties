@@ -1,4 +1,4 @@
-<x-layout>
+<x-buyerLayout>
     <link rel="stylesheet" href="{{ asset('css/Show_details.css') }}">
     <div class="home_container">
         <h1>{{ $property->name }}</h1>
@@ -25,7 +25,7 @@
                 <div class="btnss">
 
                     <a href="/properties">Back</a>
-                    <button>Contact Owner</button>
+                    <a href="/properties/add/{{ $property->id }}"><button>Contact Owner</button></a>
                 </div>
             </div>
         </div>
@@ -51,4 +51,4 @@
             </div>
         </div>
     </div>
-</x-layout>
+</x-buyerLayout>

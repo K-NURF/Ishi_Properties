@@ -180,7 +180,7 @@
                     <div class="text-lg space-y-6">
                         {{ $property->description }}
 
-                        <a href="{{$property->website}}" target="_blank"
+                        <a href="{{ $property->website }}" target="_blank"
                             class="block bg-black text-white py-2 rounded-xl hover:opacity-80"><i
                                 class="fa-solid fa-globe"></i>
                             Visit Website</a>
@@ -200,5 +200,17 @@
                 <button class="text-red-500"><i class="fa-solid fa-trash"></i> Delete</button>
             </form>
         </x-card>
+
+        <h3><u><strong>List of Potential Buyers</strong></u></h3>
+
+        @foreach ($potential_buyers as $potential_buyer)
+        <x-card class="mb-4">
+            <p>{{$potential_buyer->name}}</p>
+            <p>{{$potential_buyer->email}}</p>
+
+            <a href="/property/confirm/{{ $property->id }}" class="bg-blue-600 text-white py-1 px-1 mt-4 rounded">Sell to this buyer</a>
+        </x-card>            
+        @endforeach
+
     </div>
 </x-ownerLayout>
