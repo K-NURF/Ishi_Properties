@@ -82,6 +82,9 @@ class PropertyController extends Controller
     public function confirm(Property $property){
         return view('owners.confirmation-form', ['property' => $property]);
     }
+    public function confirmBuyer(Property $property){
+        return view('BuyerViews.confirmation-form', ['property' => $property]);
+    }
 
     //add to confirmation table
     public function addConfirm(Request $request){
@@ -113,11 +116,29 @@ class PropertyController extends Controller
             'communication' => 'required'
 
         ]);
+
         $data['user_id'] = auth()->user()->id;
 
         Confirmation::firstOrCreate($data, $data2);
+    
+        //comparing the buyer and owner values for confirmation
+        $buyerID = auth()->user()->id;
+        $propertyId = DB::table('confirmations')-> where ('confirmations.user_id',$buyerID)-> pluck('property_id');
 
-        return redirect('/property')->with('message', 'Confirmation successful');
+        $OwnerId = DB::table('properties')->where('properties.id',$propertyId)->pluck('user_id');
+
+          $buyerData=DB::table('confirmations')-> where ('confirmations.user_id',$buyerID)-> pluck('price','communication');
+
+          $OwnerData = DB::table('confirmations')-> where ('confirmations.user_id',$OwnerId)-> pluck('price','communication');
+          
+         if($OwnerData == $buyerData){
+           return view('BuyerViews.bank_details');
+         }
+
+         else
+        echo $OwnerData;
+        
+        //return redirect('/property')->with('message', 'Confirmation successful');
 
     }
 

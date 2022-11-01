@@ -42,8 +42,11 @@ Route::get('/property/details', [PropertyController::class, 'details'])->middlew
 //show confirmation form
 Route::get('/property/confirm/{property}', [PropertyController::class, 'confirm']);
 
+Route::get('/properties/confirm/{property}', [PropertyController::class, 'confirmBuyer']);
+
 //add to confirmation table
 Route::post('/property/confirm', [PropertyController::class, 'addConfirm']);
+Route::post('/properties/confirm', [PropertyController::class, 'addConfirmBuyer']);
 
 //manage property
 Route::get('/property/{property}', [PropertyController::class, 'show'])->middleware('auth');
