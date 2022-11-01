@@ -25,7 +25,15 @@
                 <div class="btnss">
 
                     <a href="/properties">Back</a>
-                    <a href="/properties/add/{{ $property->id }}"><button>Contact Owner</button></a>
+
+                    <a href="/properties/add/{{ $property->id }}"><button type="submit" onclick="openPopup()">Contact Owner</button></a>
+                    <!--THE POP UP MESSAGE ON CLICK-->
+                    <div class="popup" id="popup">
+                        <h2>Please Contact</h2>
+                        <p>+254#######</p>
+                        <p>####@gmail.com</p>
+                        <button type="button" onclick="closePopup()">Close</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -38,7 +46,7 @@
                     <div class="morestuff">
                         <div class="the_img">
                             <img src="{{ $property->cover_image ? asset('storage/' . $property->cover_image) : asset('images/no-image.jpg') }}"
-                    alt="img">
+                                alt="img">
                         </div>
                         <div class="more_hse_info">
                             <label for="">PRICE : {{ $sugg_property->price }}</label>
@@ -51,4 +59,4 @@
             </div>
         </div>
     </div>
-</x-buyerLayout>
+</x-layout>
