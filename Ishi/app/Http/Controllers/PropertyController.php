@@ -135,10 +135,10 @@ class PropertyController extends Controller
            return view('BuyerViews.bank_details');
          }
 
-         else
-        echo $OwnerData;
-        
-        //return redirect('/property')->with('message', 'Confirmation successful');
+        else{
+        return redirect('/properties/cart')->with('message', 'Failed to confirm your data. Please contact us for further instructions');
+
+        }        
 
     }
 
