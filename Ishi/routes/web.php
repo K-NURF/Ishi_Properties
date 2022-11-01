@@ -48,6 +48,15 @@ Route::post('/property/confirm', [PropertyController::class, 'addConfirm']);
 //manage property
 Route::get('/property/{property}', [PropertyController::class, 'show'])->middleware('auth');
 
+//edit property
+Route::get('/property/{property}/edit', [PropertyController::class, 'edit'])->middleware('auth');
+
+//update property
+Route::put('/property/{property}',[PropertyController::class, 'update'])->middleware('auth');
+
+//delete property
+Route::delete('/property/{property}',[PropertyController::class, 'delete'])->middleware('auth');
+
 //show owner owners register form
 Route::get('/owner/register',[UserController::class,'createOwner'])->middleware('guest');
 
