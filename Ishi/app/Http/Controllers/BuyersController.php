@@ -69,4 +69,13 @@ class BuyersController extends Controller
         
     }
     
+    //show buyer cart
+    public function cart(){
+        $user_id = auth()->user()->id;
+        $properties = DB::table('potential_buyers')->where('potential_buyers.user_id', $user_id)
+                                                    ->join('properties', 'potential_buyers.property_id', '=', 'properties.id')
+                                                    ->get();
+                                            
+        return view('BuyerViews.cart', ['properties' => $properties]);
+    }
 }

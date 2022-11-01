@@ -66,6 +66,9 @@ Route::get('/login',[UserController::class,'login'])->name('login')->middleware(
 //login user
 Route::post('/users/authenticate',[UserController::class,'authenticate']);
 
+//display buyer cart
+Route::get('/properties/cart', [BuyersController::class,'cart']);
+
 //add property to potential_buyer table
 Route::get('/properties/add/{property}', [Potential_buyersController::class, 'add']); 
 
