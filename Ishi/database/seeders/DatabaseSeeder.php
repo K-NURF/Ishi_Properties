@@ -23,15 +23,15 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        // $user = User::factory()->create([
-        //     'name' => 'Jill John',
-        //     'role' => 'buyer',
-        //     'email' => 'jill@example.com'
-        // ]);
-        User::factory(12)->create();
+        $user = User::factory()->create([
+            'name' => 'Jill John',
+            'role' => 'buyer',
+            'email' => 'jill@example.com'
+        ]);
+        //User::factory(12)->create();
 
         Property::factory(8)->create([
-            // 'user_id' => $user->id
+            'user_id' => $user->id
         ]);
 
     }
