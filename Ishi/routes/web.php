@@ -41,6 +41,12 @@ Route::get('/property/details', [PropertyController::class, 'details'])->middlew
 //manage property
 Route::get('/property/{property}', [PropertyController::class, 'show'])->middleware('auth');
 
+//edit property
+Route::get('/property/{property}/edit', [PropertyController::class, 'edit'])->middleware('auth');
+
+//update property
+Route::put('property/{property}',[PropertyController::class, 'update'])->middleware('auth');
+
 //show owner owners register form
 Route::get('/owner/register',[UserController::class,'createOwner'])->middleware('guest');
 //show buyer register form

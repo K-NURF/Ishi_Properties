@@ -70,5 +70,9 @@ class PropertyController extends Controller
     public function show(Property $property){
         return view('owners.show', ['property' => $property]);
     }
+     //show edit form
+     public function edit(Property $property){
+        return view('owners.edit', ['property' => $property]);
+    }
 
 }
