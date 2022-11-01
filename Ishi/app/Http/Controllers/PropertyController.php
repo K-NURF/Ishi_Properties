@@ -102,4 +102,23 @@ class PropertyController extends Controller
 
     }
 
+    //add to confirmation table
+    public function addConfirmBuyer(Request $request){
+        $data = $request->validate([
+            'property_id' => 'required',
+        ]);
+
+        $data2 = $request->validate([
+            'price' => 'required',
+            'communication' => 'required'
+
+        ]);
+        $data['user_id'] = auth()->user()->id;
+
+        Confirmation::firstOrCreate($data, $data2);
+
+        return redirect('/property')->with('message', 'Confirmation successful');
+
+    }
+
 }
