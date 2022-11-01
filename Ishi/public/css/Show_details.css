@@ -1,11 +1,11 @@
-
 .home_container {
     width: 100%;
     min-height: 120vh;
     background: rgba(103, 126, 252, 0.5);
     margin-bottom: 0;
 }
-.home_container h1{
+
+.home_container h1 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -14,8 +14,9 @@
     font-size: 30px;
     padding: 5px;
 }
+
 .home_container .parent {
-    display:grid;
+    display: grid;
     grid-template-columns: 1fr 0.8fr;
     margin: 1rem;
     padding: 1rem;
@@ -23,17 +24,19 @@
     justify-content: center;
     min-height: 60vh;
 }
-.home_container .parent .image_container{
+
+.home_container .parent .image_container {
     display: flex;
     justify-items: center;
     align-content: center;
     margin: 5px;
 }
 
-.home_container .parent .hse_information b{
+.home_container .parent .hse_information b {
     text-transform: uppercase;
 }
-.home_container .parent .hse_information p{
+
+.home_container .parent .hse_information p {
     padding: 10px;
 }
 
@@ -64,7 +67,7 @@
     color: aliceblue;
 }
 
-.home_container .parent .hse_information .btnss  button:hover {
+.home_container .parent .hse_information .btnss button:hover {
     font-size: 20px;
     background: rgb(58, 58, 94);
     color: aliceblue;
@@ -135,4 +138,32 @@
     font-size: 20px;
     background: rgb(58, 58, 94);
     color: aliceblue;
+}
+
+/**/
+.popup {
+    width: 300px;
+    background:aliceblue;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.2);
+    text-align: center;
+    padding: 0.5rem;
+    color: black;
+    visibility: hidden;
+    transition: all 100ms ease;
+    font-size: 17px;
+}
+
+.popup > h2{
+    border-bottom: 1px black solid;
+
+}
+
+.openpopup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
