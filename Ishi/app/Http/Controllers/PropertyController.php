@@ -135,10 +135,10 @@ class PropertyController extends Controller
            return view('BuyerViews.bank_details');
          }
 
-         else
-        echo $OwnerData;
+         else{
+        return redirect('/properties/cart')->with('message', 'Failed to confirmation eligiblity of communication. Please contact us for further instructions');
+         }
         
-        //return redirect('/property')->with('message', 'Confirmation successful');
 
     }
 
