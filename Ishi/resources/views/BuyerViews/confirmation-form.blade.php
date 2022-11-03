@@ -1,4 +1,4 @@
-<x-ownerLayout>
+<x-buyerLayout>
     <x-card class="p-10 mx-32 my-12">
         <header class="text-center">
             <h1 class="text-3xl font-bold">Communication and Agreement Confirmation</h1>
@@ -34,4 +34,4 @@
         </div>
         </form>
     </x-card>
-</x-ownerLayout>
+</x-buyerLayout>

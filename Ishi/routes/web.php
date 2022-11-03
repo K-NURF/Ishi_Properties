@@ -42,10 +42,12 @@ Route::get('/property/details', [PropertyController::class, 'details'])->middlew
 //show confirmation form
 Route::get('/property/confirm/{property}', [PropertyController::class, 'confirm']);
 
+//show confirmation form
 Route::get('/properties/confirm/{property}', [PropertyController::class, 'confirmBuyer']);
 
 //add to confirmation table
 Route::post('/property/confirm', [PropertyController::class, 'addConfirm']);
+
 Route::post('/properties/confirm', [PropertyController::class, 'addConfirmBuyer']);
 
 //manage property
@@ -74,6 +76,9 @@ Route::get('/properties/cart', [BuyersController::class,'cart']);
 
 //add property to potential_buyer table
 Route::get('/properties/add/{property}', [Potential_buyersController::class, 'add']); 
+
+//show bank details
+Route::get('/properties/paid', [PropertyController::class, 'ownershipChange']);
 
 /*  TODO on Buyer Page
     => Create a controller to show the properties.

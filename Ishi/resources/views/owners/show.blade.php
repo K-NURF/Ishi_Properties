@@ -194,6 +194,8 @@
                 <i class="fa-solid fa-pencil"></i> Edit
             </a>
 
+            <div class="text-purple-500"><i class="fa-sharp fa-solid fa-circle-check"></i> Change Property Status</div>
+
             <form method="POST" action="/property/{{ $property->id }}">
                 @csrf
                 @method('DELETE')

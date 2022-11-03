@@ -9,8 +9,8 @@
         <p>4749852541212210</p>
         <p>4749852541212210</p>
 
-        <button class="bg-blue-300 text-white rounded hover:bg-blue-600 px-4 py-2">
+        <a href="/properties/paid"><button class="bg-blue-300 text-white rounded hover:bg-blue-600 px-4 py-2">
             <i class="fa-solid fa-circle-check"></i>Paid
-        </button>
+        </button></a>
     </x-card>
 </x-buyerLayout>
