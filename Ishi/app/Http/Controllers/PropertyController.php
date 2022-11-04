@@ -248,3 +248,4 @@ class PropertyController extends Controller
         return redirect('/properties')->with('message', 'Oops! Looks like someone else just purchased this property');
     }
 }
+?>
