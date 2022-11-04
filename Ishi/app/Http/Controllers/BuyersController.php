@@ -10,7 +10,7 @@ class BuyersController extends Controller
 {
     public function index(){
 
-        $properties = Property::latest()->filter(request(['search']))->paginate(4);
+        $properties = Property::where('status', 0)->filter(request(['search']))->paginate(4);
         
         $locations = DB::table('properties')
                         ->select('location')
@@ -49,6 +49,7 @@ class BuyersController extends Controller
         */
         $filter_properties = DB::table('properties')
                                 ->select('*')
+                                ->where('status', 0)
                                 ->where('location', '=', $location)
                                 ->orWhere('purpose', '=', $status)
                                 ->orWhereBetween('price', [$min_price, $max_price])
@@ -64,7 +65,7 @@ class BuyersController extends Controller
                         ->with('properties', $filter_properties)
                         ->with('locations', $unique_locations);
         } else {
-            return redirect()->route('BuyersPage');
+            return redirect()->route('BuyersPage')->with('message', 'Oops! No such property found');
         }
         
     }
@@ -73,9 +74,19 @@ class BuyersController extends Controller
     public function cart(){
         $user_id = auth()->user()->id;
         $properties = DB::table('potential_buyers')->where('potential_buyers.user_id', $user_id)
-                                                    ->join('properties', 'potential_buyers.property_id', '=', 'properties.id')
+                                                    ->join('properties', function($join){
+                                                        $join->on('potential_buyers.property_id', '=', 'properties.id')
+                                                        ->where('properties.status', 0);
+                                                    })
                                                     ->get();
                                             
         return view('BuyerViews.cart', ['properties' => $properties]);
     }
+    
+    //show bank details for buyer to purchase property
+
+    public function bankDetails(){
+
+    }
+
 }

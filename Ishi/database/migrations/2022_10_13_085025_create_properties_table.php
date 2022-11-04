@@ -31,6 +31,7 @@ return new class extends Migration
             $table->string('bedroom_image')->nullable();
             $table->string('living_image')->nullable();
             $table->string('other_image')->nullable();
+            $table->integer('status')->default(0);
             $table->timestamps();
         });
     }

@@ -7,10 +7,6 @@
               obcaecati ducimus, accusantium hic laboriosam aliquam! Consequatur ipsam
               fugit rem illum.</p>
       
-            <div class="pages">
-              <a href="/properties" class="btn">Buy/Rent</a>
-              <a href="/property" class="btn">Management/Sell</a>
-            </div>
           </div>
         </section>
         <span class="divider"></span>

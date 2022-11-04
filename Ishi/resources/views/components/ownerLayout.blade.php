@@ -51,6 +51,7 @@
             <li><a href="/contactUs">Contact us</a></li> 
             @auth
             <li><a href="/property/create"><i class="fa-solid fa-gear"></i> Add Property</a></li>
+            <li><a href="/properties"><i class="fa-solid fa-right-left"></i> Switch Role</a></li>
 
             <li>
                 <form class="inline"method="POST" action="/logout">

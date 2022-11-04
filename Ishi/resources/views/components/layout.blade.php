@@ -46,7 +46,10 @@
             <li><a href="/">Home</a></li>
             <li><a href="/contactUs">Contact us</a></li>
             @auth
-
+                <li>
+                    <a href="/properties">Buy</a>
+                    <a href="/property">Manage</a>
+                </li>
                 <li>
                     <form class="inline"method="POST" action="/logout">
                         @csrf
@@ -57,7 +60,8 @@
                 </li>
             @else
                 <li>
-                    <button onclick="myFunction()" class="dropbtn hover:text-blue-400"><i class="fa-solid fa-user-plus"></i>Register</button>
+                    <button onclick="myFunction()" class="dropbtn hover:text-blue-400"><i
+                            class="fa-solid fa-user-plus"></i>Register</button>
                     <div id="registerOptions" class="dropdown-content">
                         <a href="/buyer/register" class="hover:text-blue-600">as a Buyer</a><br>
                         <a href="/owner/register" class="hover:text-blue-600">as an Owner</a>
@@ -78,11 +82,14 @@
                 border-radius: 10px;
                 z-index: 1;
             }
-            .show {display:block;}
+
+            .show {
+                display: block;
+            }
         </style>
         <script>
             /* When the user clicks on the button,
-                toggle between hiding and showing the dropdown content */
+                        toggle between hiding and showing the dropdown content */
             function myFunction() {
                 document.getElementById("registerOptions").classList.toggle("show");
             }
