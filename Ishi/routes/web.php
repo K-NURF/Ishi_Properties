@@ -93,7 +93,7 @@ Route::get('/properties/paid', [PropertyController::class, 'ownershipChange']);
     => Create a controller to show the properties.
     => Create a function in the controller to display the individual properties.
 */
-Route::get('/properties', [BuyersController::class, 'index'])->name('BuyersPage')->middleware('auth');
+Route::get('/properties', [BuyersController::class, 'index'])->name('BuyersPage');
 Route::get('/properties/{id}', [BuyersController::class, 'show'])->middleware('auth');
 // Route::get('/properties/{id}', function($id){
 //     return view('BuyerViews.ShowDetails',

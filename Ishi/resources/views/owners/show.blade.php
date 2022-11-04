@@ -199,7 +199,7 @@
             <form method="POST" action="/property/{{ $property->id }}">
                 @csrf
                 @method('DELETE')
-                <button class="text-red-500"><i class="fa-solid fa-trash"></i> Delete</button>
+                <button onclick="return confirm('Are you sure you want to delete this property?')" class="text-red-500"><i class="fa-solid fa-trash"></i> Delete</button>
             </form>
         </x-card>
 
