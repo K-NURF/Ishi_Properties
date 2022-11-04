@@ -121,57 +121,60 @@ class PropertyController extends Controller
 
         return redirect('/property')->with('message', 'Confirmation successful');
     }
-     //show edit form
-     public function edit(Property $property){
+    //show edit form
+    public function edit(Property $property)
+    {
         return view('owners.edit', ['property' => $property]);
     }
-// update property data
-public function update(Request $request, Property $property){
-    $data = $request->validate([
-        'name' => 'required',
-        'address' => 'required',
-        'location' => 'required',
-        'type' => 'required',
-        'purpose' => 'required',
-        'price' => 'required',
-        'website'=> 'nullable',
-        'description' => 'nullable' 
+    // update property data
+    public function update(Request $request, Property $property)
+    {
+        $data = $request->validate([
+            'name' => 'required',
+            'address' => 'required',
+            'location' => 'required',
+            'type' => 'required',
+            'purpose' => 'required',
+            'price' => 'required',
+            'website' => 'nullable',
+            'description' => 'nullable'
 
-    ]);
+        ]);
 
-    if ($request->hasFile('cover_image')) {
-        $data['cover_image'] = $request->file('cover_image')->store('Cover', 'public');
-    }
-    if ($request->hasFile('outdoor_image')) {
-        $data['outdoor_image'] = $request->file('outdoor_image')->store('Outdoor', 'public');
-    }
-    if ($request->hasFile('kitchen_image')) {
-        $data['kitchen_image'] = $request->file('kitchen_image')->store('Kitchen', 'public');
-    }
-    if ($request->hasFile('bathroom_image')) {
-        $data['bathroom_image'] = $request->file('bathroom_image')->store('Bathroom', 'public');
-    }
-    if ($request->hasFile('bedroom_image')) {
-        $data['bedroom_image'] = $request->file('bedroom_image')->store('Bedroom', 'public');
-    }
-    if ($request->hasFile('living_image')) {
-        $data['living_image'] = $request->file('living_image')->store('Living_room', 'public');
-    }
-    if ($request->hasFile('other_image')) {
-        $data['other_image'] = $request->file('other_image')->store('Other', 'public');
-    }
+        if ($request->hasFile('cover_image')) {
+            $data['cover_image'] = $request->file('cover_image')->store('Cover', 'public');
+        }
+        if ($request->hasFile('outdoor_image')) {
+            $data['outdoor_image'] = $request->file('outdoor_image')->store('Outdoor', 'public');
+        }
+        if ($request->hasFile('kitchen_image')) {
+            $data['kitchen_image'] = $request->file('kitchen_image')->store('Kitchen', 'public');
+        }
+        if ($request->hasFile('bathroom_image')) {
+            $data['bathroom_image'] = $request->file('bathroom_image')->store('Bathroom', 'public');
+        }
+        if ($request->hasFile('bedroom_image')) {
+            $data['bedroom_image'] = $request->file('bedroom_image')->store('Bedroom', 'public');
+        }
+        if ($request->hasFile('living_image')) {
+            $data['living_image'] = $request->file('living_image')->store('Living_room', 'public');
+        }
+        if ($request->hasFile('other_image')) {
+            $data['other_image'] = $request->file('other_image')->store('Other', 'public');
+        }
 
-    $data['user_id'] = auth()->id();
+        $data['user_id'] = auth()->id();
 
-    $property-> update($data);
+        $property->update($data);
 
-    return redirect('/property')->with('message', 'Property updated successfully');
-}
-//delete property
-public function delete(Property $property){
-    $property->delete();
-    return redirect('/property')->with('message', 'Property deleted successfully');
-}
+        return redirect('/property')->with('message', 'Property updated successfully');
+    }
+    //delete property
+    public function delete(Property $property)
+    {
+        $property->delete();
+        return redirect('/property')->with('message', 'Property deleted successfully');
+    }
     //add to confirmation table
     public function addConfirmBuyer(Request $request)
     {
@@ -220,56 +223,6 @@ public function delete(Property $property){
             return redirect('/properties/cart')->with('message', 'Failed to confirmation eligiblity of communication. Please contact us for further instructions');
         }
     }
-     //show edit form
-     public function edit(Property $property){
-        return view('owners.edit', ['property' => $property]);
-    }
-// update property data
-public function update(Request $request, Property $property){
-    $data = $request->validate([
-        'name' => 'required',
-        'address' => 'required',
-        'location' => 'required',
-        'type' => 'required',
-        'purpose' => 'required',
-        'price' => 'required',
-        'website'=> 'nullable',
-        'description' => 'nullable' 
-
-    ]);
-
-    if ($request->hasFile('cover_image')) {
-        $data['cover_image'] = $request->file('cover_image')->store('Cover', 'public');
-    }
-    if ($request->hasFile('outdoor_image')) {
-        $data['outdoor_image'] = $request->file('outdoor_image')->store('Outdoor', 'public');
-    }
-    if ($request->hasFile('kitchen_image')) {
-        $data['kitchen_image'] = $request->file('kitchen_image')->store('Kitchen', 'public');
-    }
-    if ($request->hasFile('bathroom_image')) {
-        $data['bathroom_image'] = $request->file('bathroom_image')->store('Bathroom', 'public');
-    }
-    if ($request->hasFile('bedroom_image')) {
-        $data['bedroom_image'] = $request->file('bedroom_image')->store('Bedroom', 'public');
-    }
-    if ($request->hasFile('living_image')) {
-        $data['living_image'] = $request->file('living_image')->store('Living_room', 'public');
-    }
-    if ($request->hasFile('other_image')) {
-        $data['other_image'] = $request->file('other_image')->store('Other', 'public');
-    }
-
-    $data['user_id'] = auth()->id();
-
-    $property-> update($data);
-    return redirect('/property')->with('message', 'Property updated successfully');
-}
-//delete property
-public function delete(Property $property){
-    $property->delete();
-    return redirect('/property')->with('message', 'Property deleted successfully');
-}
 
     //ownership change after buying property
     public function ownershipChange()
@@ -293,7 +246,5 @@ public function delete(Property $property){
             return redirect('/property')->with('message', 'Congratulations on your purchase. Thank you for trusting us with your property needs. You are now an Ishi Properties Owner');
         }
         return redirect('/properties')->with('message', 'Oops! Looks like someone else just purchased this property');
-
     }
-
 }
