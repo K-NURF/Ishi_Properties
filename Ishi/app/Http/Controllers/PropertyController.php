@@ -62,7 +62,7 @@ class PropertyController extends Controller
 
         Property::create($data);
 
-        return redirect('/')->with('message', 'Property added successfully');
+        return redirect('/property')->with('message', 'Property added successfully');
     }
 
     //show all properties for an owner

@@ -15,7 +15,7 @@
                 @endforeach
             </select>
             <h2>Status</h2>
-                <input type="radio" name="filter_status" id="buy" value="Buy" /><label for="buy">Buy</label><br>
+                <input type="radio" name="filter_status" id="buy" value="sell" /><label for="buy">Buy</label><br>
                 <input type="radio" name="filter_status" id="Rent" value="Rent" /><label for="Rent">Rent</label><br>
             <h2>Price</h2>
             <div class="price_filter">
