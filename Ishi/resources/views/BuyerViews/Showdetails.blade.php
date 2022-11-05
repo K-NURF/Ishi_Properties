@@ -6,6 +6,7 @@
             <div class="image_container">
                 <img src="{{ $property->cover_image ? asset('storage/' . $property->cover_image) : asset('images/no-image.jpg') }}"
                     alt="img">
+                
             </div>
             <div class="hse_information">
                 {{-- <form action="">
@@ -25,8 +26,8 @@
                 <div class="btnss">
 
                     <a href="/properties">Back</a>
-
-                    <a href="/properties/add/{{ $property->id }}"><button type="submit" onclick="openPopup()">Contact Owner</button></a>
+                    <button type="submit" onclick="openPopup()"><a href="/properties/add/{{ $property->id }}">Contact Owner</a></button>
+                    <form style="display: inline" action="/add-to-wishlist" method="post" enctype="multipart/form-data"> @csrf<input type="text" name="t_prop_id" value="{{ $property->id }}" hidden> <button id="btn_wishlist" type="submit"><i id="heart_icon" class="fa-regular fa-heart"></i></button></form>
                     <!--THE POP UP MESSAGE ON CLICK-->
                     <div class="popup" id="popup">
                         <h2>Please Contact</h2>

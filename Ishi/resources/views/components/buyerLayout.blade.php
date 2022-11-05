@@ -44,7 +44,7 @@
             <li><a href="/">Home</a></li>
             <li><a href="/contactUs">Contact us</a></li>
             <li><a href="/properties/cart"><i class="fa-solid fa-shopping-cart"></i>Cart</a></li>
-            <li><a href="/properties/wishlist"><i class="fa-solid fa-heart"></i>Wish List</a></li>
+            <li><a href="/wishlist"><i class="fa-solid fa-heart"></i>Wish List</a></li>
             @auth
             @php
             if(auth()->user()->role == "owner"){
