@@ -7,6 +7,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\BuyersController;
 use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\Potential_buyersController;
+use App\Http\Controllers\WishlistController;
 
 /*
 |--------------------------------------------------------------------------
@@ -95,6 +96,9 @@ Route::get('/properties/paid', [PropertyController::class, 'ownershipChange']);
 */
 Route::get('/properties', [BuyersController::class, 'index'])->name('BuyersPage')->middleware('auth');
 Route::get('/properties/{id}', [BuyersController::class, 'show'])->middleware('auth');
+Route::post('/add-to-wishlist', [WishlistController::class, 'addToWishlist'])->middleware('auth');
+Route::get('/wishlist', [WishlistController::class, 'index'])->middleware('auth');
+Route::delete('/wishlist/{property_id}', [WishlistController::class, 'remove'])->middleware('auth');
 // Route::get('/properties/{id}', function($id){
 //     return view('BuyerViews.ShowDetails',
 //         ['property' => Property::find($id)]
