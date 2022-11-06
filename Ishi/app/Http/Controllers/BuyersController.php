@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Property;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -26,6 +27,7 @@ class BuyersController extends Controller
     public function show($id){
         $property = Property::find($id);
         $prop_location = $property->location;
+        $user = User::find($property->user_id);
         $sugg_properties = Property::where('location', '=', $prop_location)
                                     ->where('id', '!=', $property->id)
                                     ->orWhere('purpose', '=', $property->purpose)
@@ -36,6 +38,7 @@ class BuyersController extends Controller
 
         return view('BuyerViews.Showdetails')
                     ->with('property', $property)
+                    ->with('user', $user)
                     ->with('suggested_properties', $sugg_properties);       
     }
 

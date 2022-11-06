@@ -1,7 +1,6 @@
 .home_container {
     width: 100%;
     min-height: 120vh;
-    background: rgba(103, 126, 252, 0.5);
     margin-bottom: 0;
 }
 
@@ -41,7 +40,7 @@
 }
 
 .home_container .parent .hse_information .btnss a {
-    background: rgb(58, 58, 94, 0.4);
+    background: rgba(9, 86, 200, 0.4);
     border-radius: 5px;
     padding: 8px;
     margin: 0.8rem;
@@ -51,8 +50,8 @@
 }
 
 .home_container .parent .hse_information .btnss button {
-    background: rgb(58, 58, 94, 0.4);
-    border-radius: 5px;
+  background: rgba(9, 86, 200, 0.4);
+  border-radius: 5px;
     padding: 8px;
     margin: 0.8rem;
     text-transform: uppercase;
@@ -63,13 +62,13 @@
 
 .home_container .parent .hse_information .btnss a:hover {
     font-size: 20px;
-    background: rgb(58, 58, 94);
+    background: rgb(38, 38, 213);
     color: aliceblue;
 }
 
 .home_container .parent .hse_information .btnss button:hover {
     font-size: 20px;
-    background: rgb(58, 58, 94);
+    background: rgb(38, 38, 213);
     color: aliceblue;
 }
 
@@ -80,7 +79,7 @@
     margin: 1rem;
     padding: 1rem;
     margin-top: 0;
-    background: rgba(120, 120, 246, 0.5);
+    background: rgba(105, 221, 239, 0.459);
 }
 
 .home_container .suggested_properties .sugg_heading {
@@ -120,12 +119,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: rgba(103, 126, 252, 0.5);
+    background: rgba(26, 181, 220, 0.5);
     border-radius: 5px;
 }
 
 .home_container .suggested_properties .detailss .morestuff .more_hse_info a {
-    background: rgb(58, 58, 94, 0.4);
+    background: rgba(9, 70, 203, 0.4);
     border-radius: 5px;
     padding: 5px;
     margin: 0.8rem;

@@ -199,7 +199,7 @@
                     echo '<a href="/property/changeStatusA/'.$property->id.'" class="text-orange-500"><i class="fa-sharp fa-solid fa-circle-check"></i> Change Status to Unavailable
             </a>';
                 }
-                if ($property->status == '2') {
+                if ($property->status == '2' ||$property->status == '1') {
                     echo '<a href="/property/changeStatusB/'.$property->id.'" class="text-green-500"><i class="fa-sharp fa-solid fa-circle-check"></i> Change Status to Available
             </a>';
                 }

@@ -24,6 +24,7 @@ class UserController extends Controller
         
             'name' =>['required','min:3'],
             'email' =>['required','email',Rule::unique('users','email')],
+            'telephone' =>['required',Rule::unique('users','telephone')],
             'password' =>['required','confirmed','min:6'],
             'role'=>['required']
         ]);

@@ -112,10 +112,11 @@
                             value="{{ $property->id }}" hidden> <button id="btn_wishlist" type="submit"><i
                                 id="heart_icon" class="fa-regular fa-heart"></i></button></form>
                     <!--THE POP UP MESSAGE ON CLICK-->
-                    <div class="popup" id="OpenPopup">
-                        <h2>Please Contact</h2>
-                        <p>+254#######</p>
-                        <p>####@gmail.com</p>
+                    <div class="popup" id="popup">
+                        <h2>Please Contact {{$user->name}} at</h2>
+                        <p>{{$user->telephone}}</p>
+                        <p>or</p>
+                        <p>{{$user->email}}</p>
                         <button type="button" onclick="closePopup()">Close</button>
                     </div>
                 </div>
@@ -143,4 +144,17 @@
             </div>
         </div>
     </div>
+        <!-- SCRIPT FOR POPUP -->
+        <script>
+            let popup = document.getElementById("popup");
+    
+            function openPopup() {
+                popup.classList.add("openpopup");
+            }
+    
+            function closePopup() {
+                popup.classList.remove("openpopup");
+            }
+    
+        </script>
     </x-layout>

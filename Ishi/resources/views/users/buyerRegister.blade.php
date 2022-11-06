@@ -24,6 +24,15 @@
             <p class="text-red-500 text-xs mt-1">{{$message}}</p>
             @enderror
           </div>
+          <div class="mb-6">
+            <label for="telephone" class="inline-block text-lg mb-2">Telephone Number</label>
+            <input type="telephone" class="border border-gray-200 rounded p-2 w-full" name="telephone" placeholder="254712345678" pattern="[0-9]{12}" value="{{old('telephone')}}" />
+            <small>Format: 254712345678</small>
+    
+            @error('telephone')
+            <p class="text-red-500 text-xs mt-1">{{$message}}</p>
+            @enderror
+          </div>
           <input type="hidden"name="role"value="buyer">
     
           <div class="mb-6">

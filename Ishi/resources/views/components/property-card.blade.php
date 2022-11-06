@@ -7,7 +7,7 @@
             alt="" />
         <div>
             <h3 class="text-2xl">
-                <a href="/property/{{ $property->id }}">{{ $property->name }}</a>
+                <a href="/property/{{ $property->id }}" class="hover:text-cyan-700 hover:underline">{{ $property->name }}</a>
             </h3>
             <div class="text-l font-medium mb-4">{{ $property->type }}</div>
             <div class="text-lg mt-4">
