@@ -29,4 +29,5 @@
             class="mt-2 bg-blue-300 text-white rounded py-2 px-4 hover:bg-blue-600">
             Continue with transaction
         </button></a>
+        <form action="/properties/cart/{{$property->id}}" method="post" enctype="multipart/form-data"> @csrf @method('delete') <button type="submit"><i class="fa-solid fa-trash-can"></i>Remove</button></form>
 </x-card>
