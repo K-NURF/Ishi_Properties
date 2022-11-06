@@ -28,6 +28,12 @@ Route::get('/about', function () {
     return view('about');
 });
 
+//show contact us page
+Route::get('/contactUs', function () {
+    return view('contactUs');
+});
+
+
 //show create property form
 Route::get('/property/create', [PropertyController::class, 'create'])->middleware('auth');
 

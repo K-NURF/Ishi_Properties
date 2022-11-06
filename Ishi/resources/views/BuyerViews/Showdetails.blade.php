@@ -157,4 +157,4 @@
             }
     
         </script>
-    </x-layout>
+    </x-buyerLayout>

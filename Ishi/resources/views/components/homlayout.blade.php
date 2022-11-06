@@ -28,12 +28,11 @@
     <link rel="stylesheet" href="css/style6.css">
     <link rel="stylesheet" href="../css/style6.css">
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/contactUs.css" />
 </head>
 
 <body>
-    <nav class="flex justify-between items-center" style="background-color:rgb(95,123,157)">
-        <a href="/"><img class="w-32 ml-7" src="{{ asset('images/ishi (5).png') }}" alt="" /></a>
+    <nav class="flex justify-between items-center">
+        <a href="/"><img class="w-32 ml-7" src="{{ asset('images/ishi (4).png') }}" alt="" /></a>
         <ul class="flex space-x-6 mr-6 text-lg">
 
             @auth
