@@ -18,10 +18,8 @@ section{
     background-blend-mode:overlay;
 
 }
-
-
 .content{
-    margin-top: 40px;;
+    margin-top: 0px;;
     margin-left: 9%;
     color :white;
 }
@@ -217,4 +215,6 @@ section{
     height: 450px;
 }
 
-
+.widen{
+  padding:200px
+}

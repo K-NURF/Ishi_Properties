@@ -1,4 +1,4 @@
-<x-layout>
+<x-homeLayout>
     <section> 
           <div class="content">
             <h1 class="landing">Ishi Homes</h1>
@@ -37,6 +37,7 @@
           </div>
         </div>
         {{-- <div c  --}}
+        <div class = "widen"></div>
    
-</x-layout>
+</x-homeLayout>
 
