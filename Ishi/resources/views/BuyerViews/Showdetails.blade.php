@@ -6,51 +6,57 @@
             <div class="image_container">
                 {{-- <img src="{{ $property->cover_image ? asset('storage/' . $property->cover_image) : asset('images/no-image.jpg') }}"
                     alt="img"> --}}
-                    <div class="slideshow-container">
+                <div class="slideshow-container">
 
-                        <!-- Full-width images with number and caption text -->
-                        <div class="mySlides fade">
-                          <div class="numbertext">1 / 6</div>
-                          <img src="{{ $property->outdoor_image ? asset('storage/' . $property->outdoor) : asset('images/outdoor.jpg') }}" style="width:100%">
-                          <div class="text">Outdoor</div>
-                        </div>
-                      
-                        <div class="mySlides fade">
-                          <div class="numbertext">2 / 6</div>
-                          <img src="{{ $property->living_image ? asset('storage/' . $property->living_image) : asset('images/living_room.jpg') }}" style="width:100%">
-                          <div class="text">Living Room</div>
-                        </div>
-                      
-                        <div class="mySlides fade">
-                          <div class="numbertext">3 / 6</div>
-                          <img src="{{ $property->kitchen_image ? asset('storage/' . $property->kitchen_image) : asset('images/kitchen.jpg') }}" style="width:100%">
-                          <div class="text">Kitchen</div>
-                        </div>
+                    <!-- Full-width images with number and caption text -->
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 6</div>
+                        <img src="{{ $property->outdoor_image ? asset('storage/' . $property->outdoor) : asset('images/outdoor.jpg') }}"
+                            style="width:100%">
+                        <div class="text">Outdoor</div>
+                    </div>
 
-                        <div class="mySlides fade">
-                            <div class="numbertext">4 / 6</div>
-                            <img src="{{ $property->bathroom_image ? asset('storage/' . $property->bathroom_image) : asset('images/bathroom.jpg') }}" style="width:100%">
-                            <div class="text">Bathroom</div>
-                        </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 6</div>
+                        <img src="{{ $property->living_image ? asset('storage/' . $property->living_image) : asset('images/living_room.jpg') }}"
+                            style="width:100%">
+                        <div class="text">Living Room</div>
+                    </div>
 
-                        <div class="mySlides fade">
-                          <div class="numbertext">5 / 6</div>
-                          <img src="{{ $property->bedroom_image ? asset('storage/' . $property->bedroom_image) : asset('images/bedroom.jpg') }}" style="width:100%">
-                          <div class="text">Bedroom</div>
-                        </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 6</div>
+                        <img src="{{ $property->kitchen_image ? asset('storage/' . $property->kitchen_image) : asset('images/kitchen.jpg') }}"
+                            style="width:100%">
+                        <div class="text">Kitchen</div>
+                    </div>
 
-                        <div class="mySlides fade">
-                          <div class="numbertext">6 / 6</div>
-                          <img src="{{ $property->other_image ? asset('storage/' . $property->other_image) : asset('images/other.jpg') }}" style="width:100%">
-                          <div class="text">Other</div>
-                        </div>
-                      
-                        <!-- Next and previous buttons -->
-                        <a class="prev" onclick="prevSlides()">&#10094;</a>
-                        <a class="next" onclick="nextSlides()">&#10095;</a>
-                      </div>
-                      <br>
-                      {{-- <div style="text-align:center">
+                    <div class="mySlides fade">
+                        <div class="numbertext">4 / 6</div>
+                        <img src="{{ $property->bathroom_image ? asset('storage/' . $property->bathroom_image) : asset('images/bathroom.jpg') }}"
+                            style="width:100%">
+                        <div class="text">Bathroom</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">5 / 6</div>
+                        <img src="{{ $property->bedroom_image ? asset('storage/' . $property->bedroom_image) : asset('images/bedroom.jpg') }}"
+                            style="width:100%">
+                        <div class="text">Bedroom</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">6 / 6</div>
+                        <img src="{{ $property->other_image ? asset('storage/' . $property->other_image) : asset('images/other.jpg') }}"
+                            style="width:100%">
+                        <div class="text">Other</div>
+                    </div>
+
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="prevSlides()">&#10094;</a>
+                    <a class="next" onclick="nextSlides()">&#10095;</a>
+                </div>
+                <br>
+                {{-- <div style="text-align:center">
                         <span class="dot" onclick="currentSlide(0)"></span>
                         <span class="dot" onclick="currentSlide(1)"></span>
                         <span class="dot" onclick="currentSlide(2)"></span>
@@ -58,23 +64,26 @@
                         <span class="dot" onclick="currentSlide(4)"></span>
                         <span class="dot" onclick="currentSlide(5)"></span>
                       </div> --}}
-                      <script type="text/javascript">
-                        let slideIndex = 0;
-                        showSlides();
-                        function showSlides() {
+                <script type="text/javascript">
+                    let slideIndex = 0;
+                    showSlides();
+
+                    function showSlides() {
                         let i;
                         let slides = document.getElementsByClassName("mySlides");
                         for (i = 0; i < slides.length; i++) {
-                           slides[i].style.display = "none";
-                          // slides[i].fadeOut();
+                            slides[i].style.display = "none";
+                            // slides[i].fadeOut();
                         }
                         slideIndex++;
-                        if (slideIndex > slides.length) {slideIndex = 1}
-                         slides[slideIndex-1].style.display = "block";
-                        setTimeout(showSlides, 4300); // Change image every 2 seconds
+                        if (slideIndex > slides.length) {
+                            slideIndex = 1
                         }
-                      </script>
-                    
+                        slides[slideIndex - 1].style.display = "block";
+                        setTimeout(showSlides, 4300); // Change image every 2 seconds
+                    }
+                </script>
+
             </div>
             <!-- Slideshow container -->
 
@@ -96,10 +105,14 @@
                 <div class="btnss">
 
                     <a href="/properties">Back</a>
-                    <button type="submit" onclick="openPopup()"><a href="/properties/add/{{ $property->id }}">Contact Owner</a></button>
-                    <form style="display: inline" action="/add-to-wishlist" method="post" enctype="multipart/form-data"> @csrf<input type="text" name="t_prop_id" value="{{ $property->id }}" hidden> <button id="btn_wishlist" type="submit"><i id="heart_icon" class="fa-regular fa-heart"></i></button></form>
+                    <a href="/properties/add/{{ $property->id }}">Contact Owner</a>
+                    <button type="submit" onclick="openPopup()">View Owner Details</button>
+                    <form style="display: inline" action="/add-to-wishlist" method="post"
+                        enctype="multipart/form-data"> @csrf<input type="text" name="t_prop_id"
+                            value="{{ $property->id }}" hidden> <button id="btn_wishlist" type="submit"><i
+                                id="heart_icon" class="fa-regular fa-heart"></i></button></form>
                     <!--THE POP UP MESSAGE ON CLICK-->
-                    <div class="popup" id="popup">
+                    <div class="popup" id="OpenPopup">
                         <h2>Please Contact</h2>
                         <p>+254#######</p>
                         <p>####@gmail.com</p>
@@ -130,4 +143,4 @@
             </div>
         </div>
     </div>
-</x-layout>
+    </x-layout>

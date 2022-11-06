@@ -51,6 +51,10 @@ Route::post('/property/confirm', [PropertyController::class, 'addConfirm']);
 
 Route::post('/properties/confirm', [PropertyController::class, 'addConfirmBuyer']);
 
+//change property status
+Route::get('/property/changeStatusA/{property}', [PropertyController::class, 'changeStatusA']);
+Route::get('/property/changeStatusB/{property}', [PropertyController::class, 'changeStatusB']);
+
 //manage property
 Route::get('/property/{property}', [PropertyController::class, 'show'])->middleware('auth');
 

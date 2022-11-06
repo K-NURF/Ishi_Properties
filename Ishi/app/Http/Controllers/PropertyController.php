@@ -247,4 +247,14 @@ class PropertyController extends Controller
         }
         return redirect('/properties')->with('message', 'Oops! Looks like someone else just purchased this property');
     }
+
+    //change property status
+    public function changeStatusA(Property $property) {
+        DB::table('properties')->where('id', $property->id)->update(['status' => 2]);
+        return redirect('/property/'.$property->id)->with('message', 'Property is now no longer visible to clients');
+    }
+    public function changeStatusB(Property $property) {
+        DB::table('properties')->where('id', $property->id)->update(['status' => 0]);
+        return redirect('/property/'.$property->id)->with('message', 'Property is now available to clients');
+    }
 }
