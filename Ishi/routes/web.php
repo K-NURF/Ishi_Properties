@@ -113,5 +113,5 @@ Route::delete('/wishlist/{property_id}', [WishlistController::class, 'remove'])-
 // });
 Route::get('/filter', [BuyersController::class, 'filter'])->middleware('auth');
 
-Route::get('blah2', [PropertyController::class, 'manage'])->middleware('auth');
+//delete from cart
 Route::delete('/properties/cart/{property_id}', [Potential_buyersController::class, 'remove'])->middleware('auth');

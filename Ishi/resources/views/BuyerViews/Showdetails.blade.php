@@ -105,7 +105,7 @@
                 <div class="btnss">
 
                     <a href="/properties">Back</a>
-                    <a href="/properties/add/{{ $property->id }}">Contact Owner</a>
+                    <a href="/properties/add/{{ $property->id }} " onclick="return confirm('Adding to cart will notify the owner. Do you want to continue?')">Add to Cart</a>
                     <button type="submit" onclick="openPopup()">View Owner Details</button>
                     <form style="display: inline" action="/add-to-wishlist" method="post"
                         enctype="multipart/form-data"> @csrf<input type="text" name="t_prop_id"
