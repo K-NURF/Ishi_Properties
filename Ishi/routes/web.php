@@ -7,6 +7,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\BuyersController;
 use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\Potential_buyersController;
+use App\Http\Controllers\WishlistController;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,6 +50,10 @@ Route::get('/properties/confirm/{property}', [PropertyController::class, 'confir
 Route::post('/property/confirm', [PropertyController::class, 'addConfirm']);
 
 Route::post('/properties/confirm', [PropertyController::class, 'addConfirmBuyer']);
+
+//change property status
+Route::get('/property/changeStatusA/{property}', [PropertyController::class, 'changeStatusA']);
+Route::get('/property/changeStatusB/{property}', [PropertyController::class, 'changeStatusB']);
 
 //manage property
 Route::get('/property/{property}', [PropertyController::class, 'show'])->middleware('auth');
@@ -93,8 +98,11 @@ Route::get('/properties/paid', [PropertyController::class, 'ownershipChange']);
     => Create a controller to show the properties.
     => Create a function in the controller to display the individual properties.
 */
-Route::get('/properties', [BuyersController::class, 'index'])->name('BuyersPage')->middleware('auth');
+Route::get('/properties', [BuyersController::class, 'index'])->name('BuyersPage');
 Route::get('/properties/{id}', [BuyersController::class, 'show'])->middleware('auth');
+Route::post('/add-to-wishlist', [WishlistController::class, 'addToWishlist'])->middleware('auth');
+Route::get('/wishlist', [WishlistController::class, 'index'])->middleware('auth');
+Route::delete('/wishlist/{property_id}', [WishlistController::class, 'remove'])->middleware('auth');
 // Route::get('/properties/{id}', function($id){
 //     return view('BuyerViews.ShowDetails',
 //         ['property' => Property::find($id)]
@@ -105,4 +113,5 @@ Route::get('/properties/{id}', [BuyersController::class, 'show'])->middleware('a
 // });
 Route::get('/filter', [BuyersController::class, 'filter'])->middleware('auth');
 
-Route::get('blah2', [PropertyController::class, 'manage'])->middleware('auth');
+//delete from cart
+Route::delete('/properties/cart/{property_id}', [Potential_buyersController::class, 'remove'])->middleware('auth');

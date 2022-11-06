@@ -6,7 +6,6 @@
               dignissimos quam atque rerum sint facilis velit fugiat? Reiciendis
               obcaecati ducimus, accusantium hic laboriosam aliquam! Consequatur ipsam
               fugit rem illum.</p>
-      
           </div>
         </section>
         <span class="divider"></span>

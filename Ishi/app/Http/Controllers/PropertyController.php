@@ -62,7 +62,7 @@ class PropertyController extends Controller
 
         Property::create($data);
 
-        return redirect('/')->with('message', 'Property added successfully');
+        return redirect('/property')->with('message', 'Property added successfully');
     }
 
     //show all properties for an owner
@@ -246,5 +246,15 @@ class PropertyController extends Controller
             return redirect('/property')->with('message', 'Congratulations on your purchase. Thank you for trusting us with your property needs. You are now an Ishi Properties Owner');
         }
         return redirect('/properties')->with('message', 'Oops! Looks like someone else just purchased this property');
+    }
+
+    //change property status
+    public function changeStatusA(Property $property) {
+        DB::table('properties')->where('id', $property->id)->update(['status' => 2]);
+        return redirect('/property/'.$property->id)->with('message', 'Property is now no longer visible to clients');
+    }
+    public function changeStatusB(Property $property) {
+        DB::table('properties')->where('id', $property->id)->update(['status' => 0]);
+        return redirect('/property/'.$property->id)->with('message', 'Property is now available to clients');
     }
 }

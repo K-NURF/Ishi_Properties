@@ -34,17 +34,17 @@
     <nav class="flex justify-between items-center">
         <a href="/"><img class="w-32 ml-7" src="{{ asset('images/ishi (4).png') }}" alt="" /></a>
         <ul class="flex space-x-6 mr-6 text-lg">
-
+            @auth
             <li>
                 <span class="font-bold">
                     Welcome {{ auth()->user()->name }}
                 </span>
             </li>
-
+            @endauth
             <li><a href="/">Home</a></li>
             <li><a href="/contactUs">Contact us</a></li>
             <li><a href="/properties/cart"><i class="fa-solid fa-shopping-cart"></i>Cart</a></li>
-            <li><a href="/properties/wishlist"><i class="fa-solid fa-heart"></i>Wish List</a></li>
+            <li><a href="/wishlist"><i class="fa-solid fa-heart"></i>Wish List</a></li>
             @auth
             @php
             if(auth()->user()->role == "owner"){

@@ -27,7 +27,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'Jill John',
             'email' => 'jill@example.com'
         ]);
-        //User::factory(12)->create();
+        // User::factory(12)->create();
 
         Property::factory(8)->create([
             'user_id' => $user->id

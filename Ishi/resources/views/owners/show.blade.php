@@ -194,24 +194,36 @@
                 <i class="fa-solid fa-pencil"></i> Edit
             </a>
 
-            <div class="text-purple-500"><i class="fa-sharp fa-solid fa-circle-check"></i> Change Property Status</div>
+            @php
+                if ($property->status == '0') {
+                    echo '<a href="/property/changeStatusA/'.$property->id.'" class="text-orange-500"><i class="fa-sharp fa-solid fa-circle-check"></i> Change Status to Unavailable
+            </a>';
+                }
+                if ($property->status == '2' ||$property->status == '1') {
+                    echo '<a href="/property/changeStatusB/'.$property->id.'" class="text-green-500"><i class="fa-sharp fa-solid fa-circle-check"></i> Change Status to Available
+            </a>';
+                }
+            @endphp
+
 
             <form method="POST" action="/property/{{ $property->id }}">
                 @csrf
                 @method('DELETE')
-                <button class="text-red-500"><i class="fa-solid fa-trash"></i> Delete</button>
+                <button onclick="return confirm('Are you sure you want to delete this property?')"
+                    class="text-red-500"><i class="fa-solid fa-trash"></i> Delete</button>
             </form>
         </x-card>
 
         <h3><u><strong>List of Potential Buyers</strong></u></h3>
 
         @foreach ($potential_buyers as $potential_buyer)
-        <x-card class="mb-4">
-            <p>{{$potential_buyer->name}}</p>
-            <p>{{$potential_buyer->email}}</p>
+            <x-card class="mb-4">
+                <p>{{ $potential_buyer->name }}</p>
+                <p>{{ $potential_buyer->email }}</p>
 
-            <a href="/property/confirm/{{ $property->id }}" class="bg-blue-600 text-white py-1 px-1 mt-4 rounded">Sell to this buyer</a>
-        </x-card>            
+                <a href="/property/confirm/{{ $property->id }}"
+                    class="bg-blue-600 text-white py-1 px-1 mt-4 rounded">Sell to this buyer</a>
+            </x-card>
         @endforeach
 
     </div>
