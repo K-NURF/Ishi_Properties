@@ -48,10 +48,6 @@
             <li><a href="/contactUs" class="hover:text-white">Contact us</a></li>
             @auth
                 <li>
-                    <a href="/properties">Buy</a>
-                    <a href="/property">Manage</a>
-                </li>
-                <li>
                     <form class="inline"method="POST" action="/logout">
                         @csrf
                         <button type="submit">
@@ -120,7 +116,6 @@
 
 
     <footer class="footer">
-        <div class="container">
             <div class="row">
                 <div class="footer-col">
                     <h4>Ishi Homes</h4>
@@ -159,7 +154,6 @@
                                     <a href="#"><i class="fab  fa-youtube"></i>
                                         <a href="#"><i class="fab  fa-linkedin"></i>
                     </div>
-                </div>
             </div>
     </footer>
     <footer class="w-full flex items-center justify-start font-bold bg-blue-900 text-blue-300 h-16 md:justify-center">

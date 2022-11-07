@@ -8,18 +8,18 @@
             <ul class="honeycomb">
                 <li class="honeycomb-cell">
                     <a href="/property"><img class="honeycomb-cell_img" src="images/management.jpg">
-                        <div class="honeycomb-cell_title">Management</div>
+                        <div class="honeycomb-cell_title">Manage your asset</div>
                     </a>
                 </li>
                 <li class="honeycomb-cell">
                     <a href="/properties"><img class="honeycomb-cell_img" src="images/buy.jpg">
-                        <div class="honeycomb-cell_title">Buy</div>
+                        <div class="honeycomb-cell_title">Buy assets</div>
                     </a>
                 </li>
 
                 <li class="honeycomb-cell">
                     <a href="/properties"><img class="honeycomb-cell_img" src="images/leasing.jpg">
-                        <div class="honeycomb-cell_title">Leasing</div>
+                        <div class="honeycomb-cell_title">Lease</div>
                     </a>
                 </li>
                 <li class="honeycomb-cell">

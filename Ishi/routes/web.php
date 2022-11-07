@@ -31,7 +31,7 @@ Route::get('/about', function () {
 //show contact us page
 Route::get('/contactUs', function () {
     return view('contactUs');
-});
+})->middleware('auth');
 
 
 //show create property form
