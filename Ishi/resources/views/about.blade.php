@@ -3,10 +3,10 @@
 
         <img id="image_HDDimageControl" src="images/background.jpg" align="left" width="667" height="500">
         <div align="center">
-          <span style="color:rgb(6, 6, 59); font-size: 50px; font-family: Georgia, 'Times New Roman', Times, serif;">About Ishi Homes</span></br>
+          <span style="color:rgb(6, 6, 59); font-size: 50px; font-family: Georgia, 'Times New Roman', Times, serif;">About Ishi Properties</span></br>
       
           <hr>
-          <span> Have you ever wanted to be part of the booming world of real estates<br> or maybe looking for a place for your family? <br>Look no further! <br>Ishi Homes is the place for you! Ishi Homes is a private company<br> aimed at providing a platform for home owners to lease their properties<br> and for people to buy houses</span></br>
+          <span> Have you ever wanted to be part of the booming world of real estates<br> or maybe looking for a place for your family? <br>Look no further! <br>Ishi Properties is the place for you! Ishi Properties is a private company<br> aimed at providing a platform for home owners to lease their properties<br> and for people to buy houses</span></br>
           <span>*********</span>
         </div>
       
@@ -27,7 +27,7 @@
             <img id="image_HDDimageControl" src="images/history.jpg" align="left" width="667" height="500">
             <div align="center">
               <span style="color:rgb(6, 6, 59); font-size: 50px; font-family: Georgia, 'Times New Roman', Times, serif;"> Our History</span></br>
-              <span>Ishi Homes was started by a group of youngsters who saw it inspired by school assignments.<br> Well it worked so well that they decided to go corporate.</span></br>
+              <span>Ishi Properties was started by a group of youngsters who saw it inspired by school assignments.<br> Well it worked so well that they decided to go corporate.</span></br>
               <span>********</span>
             </div>
       

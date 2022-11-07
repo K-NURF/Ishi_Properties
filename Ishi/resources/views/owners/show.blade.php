@@ -216,6 +216,10 @@
 
         <h3><u><strong>List of Potential Buyers</strong></u></h3>
 
+        @if (count($potential_buyers) == 0)
+        <p class="m-4 text-xl">*Still waiting. Patience 	&#128513;</p>
+        @endif
+
         @foreach ($potential_buyers as $potential_buyer)
             <x-card class="mb-4">
                 <p>{{ $potential_buyer->name }}</p>

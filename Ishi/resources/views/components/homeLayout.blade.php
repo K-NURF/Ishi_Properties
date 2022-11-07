@@ -25,33 +25,28 @@
     </script>
     <link rel="stylesheet" href="css/main-footer.css">
     <link rel="stylesheet" href="../css/main-footer.css">
-    <link rel="stylesheet" href="../../css/main-footer.css">
     <link rel="stylesheet" href="css/style6.css">
     <link rel="stylesheet" href="../css/style6.css">
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/contactUs.css" />
 </head>
 
 <body>
-    <nav class="flex justify-between items-center">
-        <a href="/"><img class="w-32 ml-7" src="{{ asset('images/ishi (4).png') }}" alt="" /></a>
+    <nav class="flex justify-between items-center" style="background-color:rgb(95,123,157)">
+        <a href="/"><img class="w-32 ml-7" src="{{ asset('images/ishi (5).png') }}" alt="" /></a>
         <ul class="flex space-x-6 mr-6 text-lg">
+
             @auth
-            <li>
-                <span class="font-bold">
-                    Welcome {{ auth()->user()->name }}
-                </span>
-            </li>
+                <li>
+                    <span class="font-bold">
+                        Welcome {{ auth()->user()->name }}
+                    </span>
+                </li>
             @endauth
-            <li><a href="/">Home</a></li>
-            <li><a href="/contactUs">Contact us</a></li>
-            <li><a href="/properties/cart"><i class="fa-solid fa-shopping-cart"></i> Cart</a></li>
-            <li><a href="/wishlist"><i class="fa-solid fa-heart"></i> Wish List</a></li>
+
+            <li><a href="/" class="hover:text-white">Home</a></li>
+            <li><a href="/contactUs" class="hover:text-white">Contact us</a></li>
             @auth
-            @php
-            if(auth()->user()->role == "owner"){
-                echo "<li><a href='/property'><i class='fa-solid fa-right-left'></i> Switch Role</a></li>";
-            }
-            @endphp
                 <li>
                     <form class="inline"method="POST" action="/logout">
                         @csrf
@@ -60,8 +55,56 @@
                         </button>
                     </form>
                 </li>
+            @else
+                <li>
+                    <button onclick="myFunction()" class="dropbtn hover:text-white"><i
+                            class="fa-solid fa-user-plus"></i>Register</button>
+                    <div id="registerOptions" class="dropdown-content">
+                        <a href="/buyer/register" class="hover:text-white">as a Buyer</a><br>
+                        <a href="/owner/register" class="hover:text-white">as an Owner</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="/login" class="hover:text-white"><i class="fa-solid fa-arrow-right-to-bracket"></i>
+                        Login</a>
+                </li>
             @endauth
         </ul>
+        <style>
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                padding: 5px;
+                background-color: rgb(151, 201, 230);
+                border-radius: 10px;
+                z-index: 1;
+            }
+
+            .show {
+                display: block;
+            }
+        </style>
+        <script>
+            /* When the user clicks on the button,
+                        toggle between hiding and showing the dropdown content */
+            function myFunction() {
+                document.getElementById("registerOptions").classList.toggle("show");
+            }
+
+            // Close the dropdown menu if the user clicks outside of it
+            window.onclick = function(event) {
+                if (!event.target.matches('.dropbtn')) {
+                    var dropdowns = document.getElementsByClassName("dropdown-content");
+                    var i;
+                    for (i = 0; i < dropdowns.length; i++) {
+                        var openDropdown = dropdowns[i];
+                        if (openDropdown.classList.contains('show')) {
+                            openDropdown.classList.remove('show');
+                        }
+                    }
+                }
+            }
+        </script>
     </nav>
 
 
@@ -73,7 +116,6 @@
 
 
     <footer class="footer">
-        <div class="container">
             <div class="row">
                 <div class="footer-col">
                     <h4>Ishi Properties</h4>
@@ -112,10 +154,9 @@
                                     <a href="#"><i class="fab  fa-youtube"></i>
                                         <a href="#"><i class="fab  fa-linkedin"></i>
                     </div>
-                </div>
             </div>
     </footer>
-    <footer class="w-full flex items-center justify-start font-bold bg-blue-900 text-blue-300 h-20 md:justify-center">
+    <footer class="w-full flex items-center justify-start font-bold bg-blue-900 text-blue-300 h-16 md:justify-center">
 
         <p class="ml-2 mr-64">Copyright &copy; 2022, All Rights reserved</p>
 
