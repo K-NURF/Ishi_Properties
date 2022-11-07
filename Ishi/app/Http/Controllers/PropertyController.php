@@ -85,6 +85,9 @@ class PropertyController extends Controller
         if (auth()->user()->role != "owner") {
             abort(403, 'Unauthorized Action! This page is for property owners only');
         }
+        if (auth()->user()->id != $property->user_id) {
+            abort(403, 'Unauthorized Action! Access Denied!');
+        }
 
         $potential_buyers = DB::table('potential_buyers')->where('property_id', $property->id)
             ->join('users', 'potential_buyers.user_id', '=', 'users.id')
