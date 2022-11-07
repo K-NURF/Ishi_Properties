@@ -25,7 +25,10 @@ class BuyersController extends Controller
     }
 
     public function show($id){
-        $property = Property::find($id);
+        $property = Property::where('status', 0)->find($id);
+        if($property == null){
+            abort(403, 'Unauthorized Action! Access Denied!');
+        }
         $prop_location = $property->location;
         $user = User::find($property->user_id);
         $sugg_properties = Property::where('location', '=', $prop_location)

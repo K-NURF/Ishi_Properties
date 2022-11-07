@@ -99,9 +99,14 @@
                 <p><b>Property Name:</b> {{ $property->name }}</p>
                 <p><b>City:</b> {{ $property->location }}</p>
                 <p><b>Address:</b> {{ $property->address }}</p>
+                <p><b>type:</b> {{ $property->type }}</p>
                 <p><b>Price:</b> {{ $property->price }}</p>
                 {{-- <textarea class="txtarea" id="" cols="30" rows="10" placeholder="Property description">{{$property->Description}}</textarea> --}}
-                <p> <b>Description:</b> {{ $property->description }}</p>
+                <p> <b>Description:</b> {{ $property->description }}</p><br>
+                <a href="{{ $property->website }}" target="_blank"
+                    class="bg-black text-white py-2 rounded-xl hover:opacity-80 p-4 ml-3"><i
+                        class="fa-solid fa-globe"></i>
+                    Visit Website</a><br>
                 <div class="btnss">
 
                     <a href="/properties">Back</a>
