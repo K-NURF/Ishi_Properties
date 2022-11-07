@@ -44,8 +44,8 @@
                 </li>
             @endauth
 
-            <li><a href="/">Home</a></li>
-            <li><a href="/contactUs">Contact us</a></li>
+            <li><a href="/" class="hover:text-white">Home</a></li>
+            <li><a href="/contactUs" class="hover:text-white">Contact us</a></li>
             @auth
                 <li>
                     <a href="/properties">Buy</a>
@@ -61,15 +61,15 @@
                 </li>
             @else
                 <li>
-                    <button onclick="myFunction()" class="dropbtn hover:text-blue-400"><i
+                    <button onclick="myFunction()" class="dropbtn hover:text-white"><i
                             class="fa-solid fa-user-plus"></i>Register</button>
                     <div id="registerOptions" class="dropdown-content">
-                        <a href="/buyer/register" class="hover:text-blue-600">as a Buyer</a><br>
-                        <a href="/owner/register" class="hover:text-blue-600">as an Owner</a>
+                        <a href="/buyer/register" class="hover:text-white">as a Buyer</a><br>
+                        <a href="/owner/register" class="hover:text-white">as an Owner</a>
                     </div>
                 </li>
                 <li>
-                    <a href="/login" class="hover:text-blue-400"><i class="fa-solid fa-arrow-right-to-bracket"></i>
+                    <a href="/login" class="hover:text-white"><i class="fa-solid fa-arrow-right-to-bracket"></i>
                         Login</a>
                 </li>
             @endauth
