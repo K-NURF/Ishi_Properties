@@ -30,7 +30,7 @@
     </header> -->
     <?php include ("main-header.php");?>
     <div class="content">
-      <h1 class="landing">Ishi Homes</h1>
+      <h1 class="landing">Ishi Properties</h1>
       <p class="landing">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia nostrum
         dignissimos quam atque rerum sint facilis velit fugiat? Reiciendis
         obcaecati ducimus, accusantium hic laboriosam aliquam! Consequatur ipsam

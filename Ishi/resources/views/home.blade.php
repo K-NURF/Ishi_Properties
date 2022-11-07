@@ -3,7 +3,7 @@
         <div class="content">
             <h1>Ishi Properties</h1>
     <div class="section2">
-        <div class="section2part1">What we <br> Ishi homes Do <br> For you</div>
+        <div class="section2part1">What we <br> Ishi Properties Do <br> For you</div>
         <div class="section2part2">
             <ul class="honeycomb">
                 <li class="honeycomb-cell">

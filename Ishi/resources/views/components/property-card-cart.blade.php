@@ -1,6 +1,6 @@
 @props(['property'])
 
-<x-card class="m-4 p-2">
+<x-card class="my-4 mx-40 p-4">
     <div class="flex">
         <img class="hidden w-48 mr-6 md:block"
             src="{{ $property->cover_image ? asset('storage/' . $property->cover_image) : asset('images/no-image.jpg') }}"
@@ -24,10 +24,13 @@
                 }
             @endphp
         </div>
-    </div>
+    <div class="flex">
     <a href="/properties/confirm/{{ $property->id }}"><button type="submit"
-            class="mt-2 bg-blue-300 text-white rounded py-2 px-4 hover:bg-blue-600">
+            class="ml-12 mt-2 bg-blue-300 text-white rounded py-2 px-4 hover:bg-blue-600">
             Continue with transaction
         </button></a>
-        <form action="/properties/cart/{{$property->id}}" method="post" enctype="multipart/form-data"> @csrf @method('delete') <button type="submit"><i class="fa-solid fa-trash-can"></i>Remove</button></form>
+        <form action="/properties/cart/{{$property->id}}" method="post" enctype="multipart/form-data"> @csrf @method('delete') <button type="submit" onclick="return confirm('Confirm removing this property from cart')"class="mt-2 bg-red-400 text-white rounded py-2 px-4 hover:bg-red-600 ml-12"><i class="fa-solid fa-trash-can"></i> Remove</button></form>
+</div>    
+</div>
+
 </x-card>

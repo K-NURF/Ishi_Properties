@@ -28,6 +28,7 @@
     </script>
     <link rel="stylesheet" href="css/home.css" />
     <link rel="stylesheet" href="css/main-footer.css">
+    <link rel="stylesheet" href="../../css/main-footer.css">
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/contactUs.css" />
     <link rel="stylesheet" href="css/style6.css">
@@ -91,10 +92,9 @@
 
 
     <footer class="footer">
-        <div class="container">
             <div class="row">
                 <div class="footer-col">
-                    <h4>Ishi Homes</h4>
+                    <h4>Ishi Properties</h4>
                     <ul>
                         <li><a href="/about">About us</a></li>
                         <li><a href="#">our services</a></li>
@@ -131,7 +131,6 @@
                     <a href="#"><i class= "fab  fa-linkedin"></i>
                 </div>
             </div>
-        </div>
     </footer>
     <footer class="w-full flex items-center justify-start font-bold bg-blue-900 text-blue-300 h-20 md:justify-center"
     >

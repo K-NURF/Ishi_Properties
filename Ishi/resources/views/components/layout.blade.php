@@ -122,7 +122,7 @@
         <div class="container">
             <div class="row">
                 <div class="footer-col">
-                    <h4>Ishi Homes</h4>
+                    <h4>Ishi Properties</h4>
                     <ul>
                         <li><a href="/about">About us</a></li>
                         <li><a href="#">our services</a></li>

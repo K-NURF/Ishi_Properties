@@ -1,7 +1,9 @@
 <x-buyerLayout>
-
+    <h1 class="text-2xl flex justify-center">WISHLIST</h1>
+    <a href="/properties" class="inline-block text-black ml-4 mb-4"><i class="fa-solid fa-arrow-left"></i> Back
+    </a>
     @foreach ($properties as $property)
-        <x-card class="m-4 p-2">
+        <x-card class="my-4 mx-20 p-2">
             <div class="flex">
                 <img class="hidden w-48 mr-6 md:block"
                     src="{{ $property->cover_image ? asset('storage/' . $property->cover_image) : asset('images/no-image.jpg') }}"
@@ -24,7 +26,7 @@
                             echo '<div class="text-orange-500"><i class="fa-light fa-road-barrier"></i> Unavailable</div>';
                         }
                     @endphp
-                    <form action="/wishlist/{{$property->id}}" method="post" enctype="multipart/form-data"> @csrf @method('delete') <button type="submit"><i class="fa-solid fa-trash-can"></i>Remove</button></form>
+                    <form action="/wishlist/{{$property->id}}" method="post" enctype="multipart/form-data"> @csrf @method('delete') <button type="submit" onclick="return confirm('Confirm removing this property from wishlist')"class="mt-2 bg-red-400 text-white rounded py-2 px-4 hover:bg-red-600"><i class="fa-solid fa-trash-can"></i> Remove</button></form>
                 </div>
             </div>
         </x-card>

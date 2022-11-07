@@ -25,6 +25,7 @@
     </script>
     <link rel="stylesheet" href="css/main-footer.css">
     <link rel="stylesheet" href="../css/main-footer.css">
+    <link rel="stylesheet" href="../../css/main-footer.css">
     <link rel="stylesheet" href="css/style6.css">
     <link rel="stylesheet" href="../css/style6.css">
     <link rel="stylesheet" href="css/style.css" />
@@ -43,8 +44,8 @@
             @endauth
             <li><a href="/">Home</a></li>
             <li><a href="/contactUs">Contact us</a></li>
-            <li><a href="/properties/cart"><i class="fa-solid fa-shopping-cart"></i>Cart</a></li>
-            <li><a href="/wishlist"><i class="fa-solid fa-heart"></i>Wish List</a></li>
+            <li><a href="/properties/cart"><i class="fa-solid fa-shopping-cart"></i> Cart</a></li>
+            <li><a href="/wishlist"><i class="fa-solid fa-heart"></i> Wish List</a></li>
             @auth
             @php
             if(auth()->user()->role == "owner"){
@@ -75,7 +76,7 @@
         <div class="container">
             <div class="row">
                 <div class="footer-col">
-                    <h4>Ishi Homes</h4>
+                    <h4>Ishi Properties</h4>
                     <ul>
                         <li><a href="/about">About us</a></li>
                         <li><a href="#">our services</a></li>
