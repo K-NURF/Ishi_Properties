@@ -4,9 +4,9 @@
         <div class="content">
             <h2>Contact Us</h2>
             <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae harum
-                amet distinctio cum facilis? Veritatis aspernatur ipsam corporis vero
-                natus
+                Need to get in touch with us? Either  fill out the form<br>
+                with your inquiry or find  the departmetn email you'd<br>
+                like to contact below
             </p>
         </div>
         <div class="container">
