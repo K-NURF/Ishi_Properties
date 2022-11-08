@@ -5,7 +5,7 @@
     <div class="section2">
         <div class="section2part1">What we <br> Ishi Properties Do <br> For you</div>
         <div class="section2part2">
-            <ul class="honeycomb">
+            <ul class="honeycomb" id="honeycomb">
                 <li class="honeycomb-cell">
                     <a href="/property"><img class="honeycomb-cell_img" src="images/management.jpg">
                         <div class="honeycomb-cell_title">Manage your asset</div>
