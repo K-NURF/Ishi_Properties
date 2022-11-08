@@ -1,7 +1,14 @@
 <x-homeLayout>
     <section>
-        <div class="content">
+        <div class="openning" >
             <h1>Ishi Properties</h1>
+            <p>Our goal is to combine knowledge,passion and skills to exceed each client's  expectations, and <br>
+            most of all, to show we genuinely care. Real esate changes lives and because of that, we<br> create experiences worth taking about.</p>
+        </div>
+    </section>
+    <div class="services" id="services">OUR SERVICES</div>
+    <span class="divider"></span>
+<div class="content">
     <div class="section2">
         <div class="section2part1">What we <br> Ishi Properties Do <br> For you</div>
         <div class="section2part2">
@@ -33,10 +40,10 @@
         </div>
     </div>
         </div>
-    </section>
-    <span class="divider"></span>
+    
+   
 
     {{-- <div c  --}}
-    <div class="widen"></div>
+<div class="widen"></div>
 
 </x-homeLayout>
