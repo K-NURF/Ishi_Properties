@@ -6,7 +6,7 @@
             most of all, to show we genuinely care. Real esate changes lives and because of that, we<br> create experiences worth taking about.</p>
         </div>
     </section>
-    <div class="services" >OUR SERVICES</div>
+    <div class="services" id="services">OUR SERVICES</div>
     <span class="divider"></span>
 <div class="content">
     <div class="section2">

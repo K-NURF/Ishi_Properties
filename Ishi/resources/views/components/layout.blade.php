@@ -124,7 +124,7 @@
                     <h4>Ishi Properties</h4>
                     <ul>
                         <li><a href="/about">About us</a></li>
-                        <li><a href="/#honeycomb">our services</a></li>
+                        <li><a href="/#services">our services</a></li>
                         <li><a href="/properties">Leasing</a></li>
 
                     </ul>
