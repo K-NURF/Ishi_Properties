@@ -98,7 +98,7 @@
                 <ul>
                     <li><a href="/about">About us</a></li>
                     <li><a href="/#services">our services</a></li>
-                    <li><a href="/properties">Leasing</a></li>
+                    <li><a href="/filter?filteroptions=Location&filter_status=lease&t_max_price=&t_min_price=">Leasing</a></li>
 
                 </ul>
             </div>
@@ -114,7 +114,7 @@
             <div class="footer-col">
                 <h4>Online services </h4>
                 <ul>
-                    <li><a href="/properties">Rentals</a></li>
+                    <li><a href="/filter?filteroptions=Location&filter_status=rent&t_max_price=&t_min_price=">Rental</a></li>
                     <li><a href="/property">Property management</a></li>
                 </ul>
             </div>
