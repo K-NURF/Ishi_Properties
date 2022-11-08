@@ -5,7 +5,7 @@
             <h2>Contact Us</h2>
             <p>
                 Need to get in touch with us? Either  fill out the form<br>
-                with your inquiry or find  the departmetn email you'd<br>
+                with your inquiry or find  the department email you'd<br>
                 like to contact below
             </p>
         </div>
