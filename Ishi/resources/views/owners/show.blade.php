@@ -189,7 +189,9 @@
             </div>
         </x-card>
 
-        <x-card class="mt-8 mb-8 p-2 flex space-x-6">
+        <x-card class="mt-8 mb-8 p-2 px-12 flex space-x-6 justify-between">
+            <p class="text-red-600"><i class="fa-solid fa-heart"></i> {{$interested}} liked this property</p>
+
             <a href="/property/{{ $property->id }}/edit">
                 <i class="fa-solid fa-pencil"></i> Edit
             </a>

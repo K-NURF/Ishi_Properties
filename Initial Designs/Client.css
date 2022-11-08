@@ -209,7 +209,7 @@ nav {
 .hse a {
     padding: 10px;
     margin: 5px;
-    background: hsl(240, 47%, 58%);
+    background: hsl(224, 97%, 48%);
     border-radius: 5px;
     color: aliceblue;
     border: none;
@@ -220,9 +220,9 @@ nav {
 
 .hse a:hover {
     letter-spacing: 0.25em;
-    background: hsl(240, 47%, 58%);
+    background: hsl(209, 100%, 50%);
     color: aliceblue;
-    box-shadow: 0 0 30px hsl(240, 47%, 58%);
+    box-shadow: 0 0 30px hsl(240, 100%, 14%);
     transition: 0.3s ease-in-out;
 }
 

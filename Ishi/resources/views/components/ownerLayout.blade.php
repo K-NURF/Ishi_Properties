@@ -92,46 +92,43 @@
 
 
     <footer class="footer">
-            <div class="row">
-                <div class="footer-col">
-                    <h4>Ishi Properties</h4>
-                    <ul>
-                        <li><a href="/about">About us</a></li>
-                        <li><a href="#">our services</a></li>
-                        <li><a href="#">private policy</a></li>
-                        <li><a href="#">Affiliation </a></li>
-                    </ul>
-                </div>
-            
+        <div class="row">
+            <div class="footer-col">
+                <h4>Ishi Properties</h4>
+                <ul>
+                    <li><a href="/about">About us</a></li>
+                    <li><a href="/#honeycomb">our services</a></li>
+                    <li><a href="/properties">Leasing</a></li>
+
+                </ul>
+            </div>
+
             <div class="footer-col">
                 <h4>Get help</h4>
                 <ul>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Purchases</a></li>
-                    <li><a href="#">Agreement Policies</a></li>
-                    <li><a href="#">Payment options</a></li>
+                    <li><a href="/property">Purchases</a></li>
+                    <li><a href="/properties">Online purchase</a></li>
+
                 </ul>
             </div>
             <div class="footer-col">
                 <h4>Online services </h4>
                 <ul>
-                    <li><a href="#">Rentals</a></li>
+                    <li><a href="/properties">Rentals</a></li>
                     <li><a href="/property">Property management</a></li>
-                    <li><a href="#">Leasing</a></li>
-                    <li><a href="#">Online purchase</a></li>
                 </ul>
             </div>
             <div class="footer-col">
                 <h4>Follow us</h4>
-                <div class = "social-links">
-                    <a href="#"><i class= "fab  fa-facebook-f"></i>
-                    <a href="#"><i class= "fab  fa-twitter"></i>
-                    <a href="#"><i class= "fab  fa-instagram"></i>
-                    <a href="#"><i class= "fab  fa-youtube"></i>
-                    <a href="#"><i class= "fab  fa-linkedin"></i>
+                <div class="social-links">
+                    <a href="#"><i class="fab  fa-facebook-f"></i>
+                        <a href="#"><i class="fab  fa-twitter"></i>
+                            <a href="#"><i class="fab  fa-instagram"></i>
+                                <a href="#"><i class="fab  fa-youtube"></i>
+                                    <a href="#"><i class="fab  fa-linkedin"></i>
                 </div>
-            </div>
-    </footer>
+        </div>
+</footer>
     <footer class="w-full flex items-center justify-start font-bold bg-blue-900 text-blue-300 h-20 md:justify-center"
     >
     

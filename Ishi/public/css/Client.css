@@ -106,7 +106,7 @@
 .hse a {
     padding: 10px;
     margin: 5px;
-    background: hsl(240, 47%, 58%);
+    background: hsl(205, 100%, 50%);
     border-radius: 5px;
     color: aliceblue;
     border: none;
@@ -117,9 +117,9 @@
 
 .hse a:hover {
     letter-spacing: 0.25em;
-    background: hsl(240, 47%, 58%);
+    background: hsl(215, 100%, 49%);
     color: aliceblue;
-    box-shadow: 0 0 30px hsl(240, 47%, 58%);
+    box-shadow: 0 0 30px hsl(240, 97%, 48%);
     transition: 0.3s ease-in-out;
 }
 

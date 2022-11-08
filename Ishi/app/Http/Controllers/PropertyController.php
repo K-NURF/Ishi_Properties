@@ -74,8 +74,6 @@ class PropertyController extends Controller
 
         return view('owners.index', [
             'properties' => auth()->user()->properties()->filter(request(['search']))->paginate(6)
-            // return view('owners.index', ['properties' => Property::latest()
-
         ]);
     }
 
@@ -89,10 +87,12 @@ class PropertyController extends Controller
             abort(403, 'Unauthorized Action! Access Denied!');
         }
 
+        $wishlist = DB::table('wishlists')->where('wishlists.property_id', $property->id)->count();
+
         $potential_buyers = DB::table('potential_buyers')->where('property_id', $property->id)
             ->join('users', 'potential_buyers.user_id', '=', 'users.id')
             ->get();
-        return view('owners.show', ['property' => $property, 'potential_buyers' => $potential_buyers]);
+        return view('owners.show', ['property' => $property, 'potential_buyers' => $potential_buyers, 'interested' => $wishlist]);
     }
 
     //show confirmation form
