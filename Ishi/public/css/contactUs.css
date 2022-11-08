@@ -17,6 +17,8 @@
     flex-direction: column;
     background:linear-gradient(rgba(0, 76, 130, 0.501),rgba(0, 30, 130, 0.474)), url(../images/skyscrapers-450793.jpg);
     background-size: cover;
+    opacity: 0.9;
+
     
 }
 .contact .content{
