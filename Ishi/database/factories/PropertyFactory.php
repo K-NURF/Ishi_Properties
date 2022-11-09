@@ -23,7 +23,7 @@ class PropertyFactory extends Factory
             'address' => fake()->address(),
             'location' => fake()->city(),
             'type' => 'mansion',
-            'purpose' => 'Rent',
+            'purpose' => 'rent',
             'price' => fake()->numerify('####'),
             'description' => $this->faker->paragraph(5),
             'website' => $this->faker->url(),

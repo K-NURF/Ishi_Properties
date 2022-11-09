@@ -14,7 +14,7 @@
                     <option value="{{ $location->location }}">{{ $location->location }}</option>
                 @endforeach
             </select>
-            <h2>Status</h2>
+            <h2>Purpose</h2>
                 <input type="radio" name="filter_status" id="buy" value="sell" /><label for="buy">Buy</label><br>
                 <input type="radio" name="filter_status" id="Rent" value="rent" /><label for="Rent">Rent</label><br>
                 <input type="radio" name="filter_status" id="lease" value="lease" /><label for="lease">Lease</label><br>

@@ -188,9 +188,34 @@
                 </div>
             </div>
         </x-card>
+        
+        @if ($property->purpose == 'rent' && DB::table('rentings')->where('property_id', $property->id)->doesntExist())
+
+        <form method="POST" action="/property/renting" enctype="multipart/form-data" class="bg-red-50 border border-red-600 rounded p-6 my-4">
+            @csrf
+            <div class="mb-6">
+                <input type="hidden" name="property_id" value=" {{ $property->id }}">
+                <label for="rooms" class="inline-block text-lg mb-2">Enter number of Rooms available for renting</label>
+                <input type="text" class="border border-black-500 rounded p-2 w-full" name="rooms"
+                    value="{{ old('rooms') }}" />
+        
+                @error('rooms')
+                    <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+                @enderror
+            </div>
+            <div class="mb-6">
+                <button
+                    class="bg-blue-300 text-white rounded py-2 px-4 hover:bg-blue-600"
+                >
+                    Add Property Information
+                </button>
+            </div>
+        </form>
+
+        @endif
 
         <x-card class="mt-8 mb-8 p-2 px-12 flex space-x-6 justify-between">
-            <p class="text-red-600"><i class="fa-solid fa-heart"></i> {{$interested}} liked this property</p>
+            <p class="text-red-600"><i class="fa-solid fa-heart"></i> {{ $interested }} liked this property</p>
 
             <a href="/property/{{ $property->id }}/edit">
                 <i class="fa-solid fa-pencil"></i> Edit
@@ -198,11 +223,15 @@
 
             @php
                 if ($property->status == '0') {
-                    echo '<a href="/property/changeStatusA/'.$property->id.'" class="text-orange-500"><i class="fa-sharp fa-solid fa-circle-check"></i> Change Status to Unavailable
+                    echo '<a href="/property/changeStatusA/' .
+                        $property->id .
+                        '" class="text-orange-500"><i class="fa-sharp fa-solid fa-circle-check"></i> Change Status to Unavailable
             </a>';
                 }
-                if ($property->status == '2' ||$property->status == '1') {
-                    echo '<a href="/property/changeStatusB/'.$property->id.'" class="text-green-500"><i class="fa-sharp fa-solid fa-circle-check"></i> Change Status to Available
+                if ($property->status == '2' || $property->status == '1') {
+                    echo '<a href="/property/changeStatusB/' .
+                        $property->id .
+                        '" class="text-green-500"><i class="fa-sharp fa-solid fa-circle-check"></i> Change Status to Available
             </a>';
                 }
             @endphp
@@ -216,21 +245,34 @@
             </form>
         </x-card>
 
-        <h3><u><strong>List of Potential Buyers</strong></u></h3>
+        @php
+            if ($property->purpose == 'sell') {
+                echo '<h3><u><strong>List of Potential Buyers</strong></u></h3>';
+                if (count($potential_buyers) == 0) {
+                    echo '<p class="m-4 text-xl">*Still waiting. Patience 	&#128513;</p>';
+                }
+            
+                foreach ($potential_buyers as $potential_buyer) {
+                    echo '<x-card class="mb-4"><p>' .
+                        $potential_buyer->name .
+                        '</p>
+                <p>' .
+                        $potential_buyer->email .
+                        '</p>
 
-        @if (count($potential_buyers) == 0)
-        <p class="m-4 text-xl">*Still waiting. Patience 	&#128513;</p>
-        @endif
-
-        @foreach ($potential_buyers as $potential_buyer)
-            <x-card class="mb-4">
-                <p>{{ $potential_buyer->name }}</p>
-                <p>{{ $potential_buyer->email }}</p>
-
-                <a href="/property/confirm/{{ $property->id }}"
+                <a href="/property/confirm/.' .
+                        $property->id .
+                        '"
                     class="bg-blue-600 text-white py-1 px-1 mt-4 rounded">Sell to this buyer</a>
-            </x-card>
-        @endforeach
+            </x-card>';
+                }
+            }
+            if ($property->purpose == 'lease'){
+
+            }
+            
+        @endphp
+
 
     </div>
 </x-ownerLayout>

@@ -56,4 +56,9 @@ class Property extends Model
     {
         return $this->hasMany(Confirmation::class, 'property_id');
     }
+    //relationship with renting
+    public function renting()
+    {
+        return $this->hasOne(renting::class, 'property_id');
+    }
 }

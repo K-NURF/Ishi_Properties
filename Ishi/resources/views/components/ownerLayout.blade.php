@@ -135,9 +135,9 @@
         <p class="ml-2 mr-64">Copyright &copy; 2022, All Rights reserved</p>
 
         <a
-            href="#"
+            href="/chat-with-us"
             class="bg-blue-600 text-white py-2 px-5 rounded ml-24"
-            >Contact Us</a
+            >Chat with us</a
         >
 
     </footer>

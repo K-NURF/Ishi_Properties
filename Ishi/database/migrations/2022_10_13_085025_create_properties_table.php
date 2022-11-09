@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('location');
             $table->string('type');
             $table->string('purpose');
-            $table->float('price', 8, 2);
+            $table->string('price', 8, 2);
             $table->longtext('description');
             $table->string('website')->nullable();
             $table->string('cover_image')->nullable();

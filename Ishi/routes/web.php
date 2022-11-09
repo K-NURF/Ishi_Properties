@@ -7,6 +7,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\BuyersController;
 use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\Potential_buyersController;
+use App\Http\Controllers\RentingController;
 use App\Http\Controllers\WishlistController;
 
 /*
@@ -45,6 +46,8 @@ Route::get('/property', [PropertyController::class, 'index'])->middleware('auth'
 
 //show property Details
 Route::get('/property/details', [PropertyController::class, 'details'])->middleware('auth');
+
+Route::post('/property/renting', [RentingController::class, 'store'])->middleware('auth');
 
 //show confirmation form
 Route::get('/property/confirm/{property}', [PropertyController::class, 'confirm']);
@@ -121,3 +124,8 @@ Route::get('/filter', [BuyersController::class, 'filter'])->middleware('auth');
 
 //delete from cart
 Route::delete('/properties/cart/{property_id}', [Potential_buyersController::class, 'remove'])->middleware('auth');
+
+Route::get('/chat-with-us', function () {
+    $user = auth()->user();
+    return view('chat', ['user' => $user]);
+});
